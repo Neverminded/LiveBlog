@@ -1,0 +1,90 @@
+﻿@model MyBlog.Models.Record
+@using MyBlog.Models;
+@using System.Web.Mvc;
+@using System.Web.WebPages;
+
+@{
+    ViewBag.Title = "LifeBlog: Статья - " + Model.Title;
+    ViewBag.Action = "GetRecord";
+    if (HttpContext.Current.User.IsInRole("Admin"))
+    {
+        Layout = "~/Views/Shared/_adminlayout.cshtml";
+    }
+
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    
+}
+
+
+<script src="~/Scripts/MicrosoftAjax.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+
+<!-- Put this script tag to the <head> of your page -->
+<script type="text/javascript" src="http://vk.com/js/api/share.js?91" charset="windows-1251"></script>
+
+
+@using (Ajax.BeginForm("AddComment", "Record", new { idcomment = Model.Id_Record }, new AjaxOptions { UpdateTargetId = "targetajax" }))
+{
+    
+    <div id="formrecord">
+        <div class="headrecord">
+            @Html.DisplayFor(model => model.Title)
+
+        </div>
+
+
+        <div class="display-field">
+            @Html.Raw(Model.Text)
+
+        </div>
+        <div id="social">
+            <script type="text/javascript" src="http://vk.com/js/api/share.js?91" charset="windows-1251"></script>
+
+
+            <script type="text/javascript">
+                document.write(VK.Share.button(false, { type: "custom", text: "<img src=\"http://vk.com/images/share_32.png\" width=\"20\" height=\"20\"  />" }));</script>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-via="For_Nevermind" data-lang="ru">Твитнуть</a>
+            <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + '://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'twitter-wjs');</script>
+
+        </div>
+        <div class="display-label">Дата публикации</div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.DateCreate)
+        </div>
+        @if (HttpContext.Current.User.IsInRole("Admin"))
+        {
+            <div class="display-label">Дата редактирования</div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.DateEdit)
+            </div>
+ 
+
+
+       
+        
+        
+        }
+
+
+        <p id="headercomment">Оставьте комментарий:</p>
+        <div>
+            <p>
+                @Html.TextArea("textarea", new { style = "margin-left:30%;" })
+            </p>
+
+            <p>
+
+                <button type="submit" class="btn btn-danger" style="width: 50%; height: 20px; margin-left: 30%; padding-top: 1px; font-family: Kelson">Добавить</button>
+            </p>
+
+
+        </div>
+
+        @Html.Partial("_commentsview")
+
+    </div>
+    
+}

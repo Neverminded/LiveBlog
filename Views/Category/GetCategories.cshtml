@@ -1,0 +1,40 @@
+﻿@model IEnumerable<MyBlog.Models.Categories>
+@using MyBlog.Models;
+@{
+    
+    if (HttpContext.Current.User.IsInRole("Admin"))
+    {
+        Layout = "~/Views/Shared/_adminlayout.cshtml";
+    }
+
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<p>
+    @Html.ActionLink("Создать категорию", "CreateCategory")
+</p>
+<table>
+    <tr>
+        <th>Название категории
+        </th>
+        <th>Действия
+        </th>
+    </tr>
+
+    @foreach (var item in (IEnumerable<Categories>)ViewData["List"])
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NameCategory)
+            </td>
+            <td>| @Html.ActionLink("Удалить", "Delete", new { id = item.Id_Category })
+            </td>
+        </tr>
+    }
+
+</table>

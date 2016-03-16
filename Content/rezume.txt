@@ -1,0 +1,172 @@
+<div style="padding:15px;">
+<div class="image">
+<p style="text-align:center">&nbsp;</p>
+</div>
+
+<p style="text-align:center"><span style="font-size:24px">Сыса Олег Александрович</span></p>
+
+<p style="text-align:center">Украина, г. Харьков, ул. Морозова, д. 34, кв. 236</p>
+
+<p style="text-align:center">Телефоны: (057) 737-58-35</p>
+
+<p style="margin-left:35.4pt; text-align:center">&nbsp;&nbsp;&nbsp;&nbsp; (063) 688-42-05</p>
+
+<p style="text-align:center">E-Mail: gmess.myacс@gmail.com</p>
+
+<p style="text-align:center">&nbsp;&nbsp; oleg_sysa@mail.ru</p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:14px"><strong><u>Цель:</u></strong></span></p>
+
+<p><strong>Общая</strong>: работа в IT-компании _________ на должности________ junior .Net разработчика.</p>
+
+<p style="text-align:justify"><strong>Расширенная</strong>: реализация приобретенных навыков программирования в сфере разработки программного обеспечения с использованием языка программирования С# и платформы MS .Net Framework 4.5. Участие в разработке коммерческих проектов, отдельных программных модулей. Интересует разработка Web-приложений, клиент-серверных систем для предприятий, информационных сервисов.</p>
+
+<p><strong><u>Квалификация:</u></strong></p>
+
+<p>&nbsp;</p>
+
+<p><strong>Общая:</strong> Разработка некоммерческих учебных проектов и модулей приложений с использованием языка C#&nbsp; и платформы .Net Framework 4.5 в течении 2 лет.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Расширенная:</strong></p>
+
+<p style="text-align:justify"><strong>- </strong>разработка учебных проектов с применением определенных языков программирования,&nbsp; технологий и инструментов для разработки.</p>
+
+<p style="text-align:justify">-&nbsp; применение объектно-ориентированных принципов программирования при структурном построении&nbsp; программ.</p>
+
+<p style="text-align:justify">&nbsp;-&nbsp; разработка реляционных баз данных.</p>
+
+<p style="text-align:justify">&nbsp;- изучение принципов работы шаблонов проектирования. Изучение концепции MVC для разработки Web - приложений.</p>
+
+<p><strong><u>Практический опыт работы:</u></strong></p>
+
+<p>&nbsp;</p>
+
+<p>Разработка некоммерческого продукта &laquo;Система управления учетными данными салона по продаже автомобилей&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p><u>Средства</u> <u>разработки</u>:</p>
+
+<p>- IDE&nbsp; &laquo;Microsoft Visual Studio 2010&raquo;</p>
+
+<p>- &laquo;SQL Management Studio 2008&raquo;</p>
+
+<p>&nbsp;</p>
+
+<p><u>Используемые языки программирования:</u></p>
+
+<p>C#, T-SQL.</p>
+
+<p><u>СУБД</u><u>:</u> &laquo;Microsoft SQL Server 2008&raquo;</p>
+
+<p>&nbsp;</p>
+
+<p><u>Вспомогательные технологии</u>:</p>
+
+<p>WinForms, ADO.Net, WCF Techology</p>
+
+<p><strong><u>Резюме:</u></strong></p>
+
+<p>&nbsp;</p>
+
+<p><strong>Языки программирования:</strong></p>
+
+<p><strong>Средний уровень: </strong>C#, T-SQL.</p>
+
+<p><strong>Умеренный уровень: </strong>C, C++, Java Core 1.7, JavaScript, XML, PL /SQL, UML.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Технологии:</strong></p>
+
+<p><strong>Высокий уровень: </strong>ASP.Net WebForms, ASP.Net MVC, WPF, WCF, WinForms, ADO.Net, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+<p style="margin-left:70.9pt">LINQ to SQL.</p>
+
+<p><strong>Средний уровень: </strong>&nbsp;&nbsp;AJAX, GDI.</p>
+
+<p>&nbsp;&nbsp;&nbsp;</p>
+
+<p><strong>СУБД:</strong></p>
+
+<p><strong>Высокий уровень: </strong>MS SQL Server 2008</p>
+
+<p><strong>Средний</strong> <strong>уровень</strong><strong>:</strong> Oracle 10g, MySQL,&nbsp; SQLite, Microsoft Access.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Использование программных инструментов для разработки:</strong></p>
+
+<p>IDE &laquo;Microsoft Visual Studio 2010&raquo;, SQL Management Studio 2008, SQL Navigator, Eclipse, JDeveloper.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Уровень владения иностранными языками:</strong></p>
+
+<p>&nbsp;</p>
+
+<p><strong>Русский, Украинский </strong>&ndash; родные языки;</p>
+
+<p><strong>A</strong><strong>нглийский: </strong>Upper-Elementary.</p>
+
+<p><strong><u>Образование:</u></strong></p>
+
+<p>&nbsp;</p>
+
+<p>2012 - 2014:&nbsp; Компьютерная академия &laquo;ШАГ&raquo;</p>
+
+<p>Курсы: специальность &laquo;Разработка программного обеспечения&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p>2009 - 2010: региональный центр информационных технологий (&quot;РЦНИТ&quot;) Курсы: наладка ПК, системное администрирование.</p>
+
+<p>&nbsp;</p>
+
+<p>2004 &ndash; 2009: Харьковский Национальный Авто &ndash; Дорожный Университет (ХНАДУ)</p>
+
+<p>Факультет: Мехатроники транспортных средств.</p>
+
+<p>Специальность: Электрические системы и комплексы транспортных средств.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong><u>Общий опыт работы:</u></strong></p>
+
+<p>&nbsp;</p>
+
+<p>2010 &ndash; 2012:&nbsp; НВО ТОВ &laquo;ЮБиСи &ndash; ПРОМО&raquo;.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+<p><strong><u>Дополнительная информация:</u></strong></p>
+
+<p>&nbsp;</p>
+
+<p>Дата рождения: 13 октября 1987;</p>
+
+<p>Семейное положение &ndash; не женат, детей нет;</p>
+
+<p>Наличие загранпаспорта и водительских прав;</p>
+
+<p>Готов к командировкам;</p>
+
+<p>Хобби: спорт, автомобили.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+</div>
+

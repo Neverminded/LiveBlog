@@ -1,0 +1,146 @@
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\MyBlog.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\MyBlog.pdb
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\Antlr3.Runtime.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\DotNetOpenAuth.Core.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\EntityFramework.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\Newtonsoft.Json.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\System.Net.Http.Formatting.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\System.Web.Helpers.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\System.Web.Http.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\System.Web.Http.WebHost.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\System.Web.Mvc.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\System.Web.Optimization.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\System.Web.Razor.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\System.Web.WebPages.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\System.Web.WebPages.Razor.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\WebGrease.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\WebMatrix.Data.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\WebMatrix.WebData.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\EntityFramework.xml
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\Newtonsoft.Json.xml
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\System.Net.Http.Formatting.xml
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\System.Web.Helpers.xml
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\System.Web.Http.xml
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\System.Web.Http.WebHost.xml
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\System.Web.Mvc.xml
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\System.Web.Razor.xml
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\System.Web.WebPages.xml
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\System.Web.WebPages.Razor.xml
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\WebMatrix.Data.xml
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\WebMatrix.WebData.xml
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\DotNetOpenAuth.Core.xml
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\ru\EntityFramework.resources.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\ru\System.Net.Http.Formatting.resources.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\ru\System.Web.Helpers.resources.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\ru\System.Web.Http.resources.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\ru\System.Web.Http.WebHost.resources.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\ru\System.Web.Mvc.resources.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\ru\System.Web.Optimization.resources.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\ru\System.Web.Razor.resources.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\ru\System.Web.WebPages.resources.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\ru\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\ru\System.Web.WebPages.Razor.resources.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\ru\WebMatrix.Data.resources.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\ru\Microsoft.Web.WebPages.OAuth.resources.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\bin\ru\WebMatrix.WebData.resources.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\obj\Debug\MyBlog.dll
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\obj\Debug\MyBlog.pdb
+C:\Users\Олег\Documents\Visual Studio 2012\Projects\MyBlog\MyBlog\obj\Debug\MyBlog.csprojResolveAssemblyReference.cache
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\MyBlog.dll
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\MyBlog.pdb
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\Microsoft.Web.Infrastructure.dll
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\Microsoft.Web.WebPages.OAuth.dll
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Net.Http.Formatting.dll
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Web.Helpers.dll
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Web.Http.dll
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Web.Http.WebHost.dll
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Web.Mvc.dll
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Web.Razor.dll
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Web.WebPages.Deployment.dll
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Web.WebPages.dll
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Web.WebPages.Razor.dll
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\WebMatrix.Data.dll
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\WebMatrix.WebData.dll
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\EntityFramework.xml
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\Microsoft.Web.Infrastructure.xml
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\Newtonsoft.Json.xml
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Net.Http.Formatting.xml
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Web.Helpers.xml
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Web.Http.xml
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Web.Http.WebHost.xml
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Web.Mvc.xml
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Web.Razor.xml
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Web.WebPages.xml
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Web.WebPages.Deployment.xml
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Web.WebPages.Razor.xml
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\WebMatrix.Data.xml
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\Microsoft.Web.WebPages.OAuth.xml
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\WebMatrix.WebData.xml
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\DotNetOpenAuth.AspNet.xml
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\DotNetOpenAuth.Core.xml
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\DotNetOpenAuth.OAuth.Consumer.xml
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\DotNetOpenAuth.OAuth.xml
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\DotNetOpenAuth.OpenId.xml
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\ru\EntityFramework.resources.dll
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\ru\System.Web.Optimization.resources.dll
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\obj\Debug\MyBlog.csprojResolveAssemblyReference.cache
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\obj\Debug\MyBlog.dll
+H:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\obj\Debug\MyBlog.pdb
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\MyBlog.dll.config
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\MyBlog.dll
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\MyBlog.pdb
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\Microsoft.Web.Infrastructure.dll
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\Microsoft.Web.WebPages.OAuth.dll
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Net.Http.Formatting.dll
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Web.Helpers.dll
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Web.Http.dll
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Web.Http.WebHost.dll
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Web.Mvc.dll
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Web.Razor.dll
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Web.WebPages.Deployment.dll
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Web.WebPages.dll
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Web.WebPages.Razor.dll
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\WebMatrix.Data.dll
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\WebMatrix.WebData.dll
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\EntityFramework.xml
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\Microsoft.Web.Infrastructure.xml
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\Newtonsoft.Json.xml
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Net.Http.Formatting.xml
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Web.Helpers.xml
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Web.Http.xml
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Web.Http.WebHost.xml
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Web.Mvc.xml
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Web.Razor.xml
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Web.WebPages.xml
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Web.WebPages.Deployment.xml
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\System.Web.WebPages.Razor.xml
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\WebMatrix.Data.xml
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\Microsoft.Web.WebPages.OAuth.xml
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\WebMatrix.WebData.xml
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\DotNetOpenAuth.AspNet.xml
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\DotNetOpenAuth.Core.xml
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\DotNetOpenAuth.OAuth.Consumer.xml
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\DotNetOpenAuth.OAuth.xml
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\DotNetOpenAuth.OpenId.xml
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\ru\EntityFramework.resources.dll
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\bin\ru\System.Web.Optimization.resources.dll
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\obj\Debug\MyBlog.csprojResolveAssemblyReference.cache
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\obj\Debug\MyBlog.dll
+J:\Programing\Projects(Исходники проектов, не изменять а работать только с копиями)\MyBlog\MyBlog\obj\Debug\MyBlog.pdb

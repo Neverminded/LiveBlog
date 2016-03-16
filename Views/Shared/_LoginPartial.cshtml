@@ -1,0 +1,25 @@
+﻿<ul class="nav navbar-nav">
+    @if (Request.IsAuthenticated)
+    {
+        <li style="display: inline; margin-top: 7%;left:30px; color: white;">Здравствуйте, @User.Identity.Name!@Html.ActionLink("Выйти", "LogOff", "Account", null, new { style = "width:100px;display:inline;" })
+        </li>
+        
+        
+    
+    }
+    else
+    {
+    
+        <li style="margin-left: 15px">
+            @Html.ActionLink("Регистрация", "Register", "Account")
+        </li>
+        <li style="margin-left: 15px">
+            @Html.ActionLink("Выполнить вход", "Login", "Account")
+        </li>
+
+    
+        
+      
+    
+    }
+</ul>

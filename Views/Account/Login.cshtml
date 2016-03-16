@@ -1,0 +1,63 @@
+﻿@model MyBlog.Models.LoginModel
+
+@{
+    ViewBag.Title = "LifeBlog: Выполнить вход";
+    if (HttpContext.Current.User.IsInRole("Admin"))
+    {
+        Layout = "~/Views/Shared/_adminlayout.cshtml";
+    }
+
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}
+
+
+
+<section id="loginForm">
+    <h2 style="padding: 30px;">Используйте для входа локальную учетную запись.</h2>
+    @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+        <fieldset>
+            <legend style="color: white">Форма входа</legend>
+            <ol>
+                <li>
+                    @Html.LabelFor(m => m.UserName)
+                    <p>
+                        @Html.TextBoxFor(m => m.UserName, new { @class = "logininput" })
+                        @Html.ValidationMessageFor(m => m.UserName)
+
+                    </p>
+
+                </li>
+                <li>
+                    @Html.LabelFor(m => m.Password)
+                    <p>
+                        @Html.PasswordFor(m => m.Password)
+                        @Html.ValidationMessageFor(m => m.Password)
+
+                    </p>
+
+                </li>
+                <li>
+                    @Html.CheckBoxFor(m => m.RememberMe)
+                    @Html.LabelFor(m => m.RememberMe, new { @class = "checkbox" })
+                </li>
+            </ol>
+            <input type="submit" class="btn btn-danger" value="Выполнить вход" />
+        </fieldset>
+        <p>
+            @Html.ActionLink("Зарегистрируйтесь", "Register", null, new { style = "color:yellow;" }), если у вас нет учетной записи.
+        </p>
+    }
+</section>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

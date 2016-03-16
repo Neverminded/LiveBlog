@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "EditResume";
+    if (HttpContext.Current.User.IsInRole("Admin"))
+    {
+        Layout = "~/Views/Shared/_adminlayout.cshtml";
+    }
+
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    }
+
+<h2>Редактор резюме</h2>
+<script src="../../Scripts/ckeditor/ckeditor.js"></script>
+<script src="../../Scripts/ckeditor/adapters/jquery.js"></script>
+<script type="text/javascript">
+    function CKupdate() {
+        for (instance in CKEDITOR.instances)
+            CKEDITOR.instances[instance].updateElement();
+       
+    }
+
+
+
+   </script>
+
+ <script type="text/javascript">
+     $(function () {
+         $('.material-inner-text').ckeditor({
+             filebrowserBrowseUrl: '/Scripts/Filemanager-master/index.html?type="Images"'
+         });
+
+     });
+
+    </script>
+
+@using (Html.BeginForm())
+{
+   <p>@Html.ActionLink("Администрирование", "GetRecords", "Record")</p>
+    
+   
+   
+<div class="material-text">
+<textarea name="textar3" class="material-inner-text">
+  @ViewData["textrezume"]
+</textarea>
+    
+</div>
+
+    
+    
+    
+     <p>
+        <input type="submit" value="Сохранить" onclick="CKupdate();"/>
+    </p>
+}

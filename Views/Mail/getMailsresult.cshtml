@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "getMailsresult";
+    Layout = "~/Views/Shared/_adminlayout.cshtml";
+}
+@using MyBlog.Models;
+
+<h2>Мои письма</h2>
+
+<table>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>Заголовок
+        </td>
+
+
+        <td>Дата отправки
+        </td>
+
+        <td>Отправитель
+        </td>
+
+    </tr>
+
+    @foreach (MailResults item in (IEnumerable<MailResults>)ViewData["results"])
+    { 
+        <tr>
+            <td>
+                @Html.ActionLink("Удалить письмо", "DeleteMail", new { id = item.Id_mailRecord })
+            </td>
+            <td>
+                @Html.ActionLink("Открыть письмо", "GetMail", new { id = item.Id_mailRecord })
+            </td>
+            <td>
+                @item.ThemeMail
+            </td>
+            <td>
+                @item.TimeSending
+
+            </td>
+
+            <td>
+                @item.NameSender
+            </td>
+        </tr>
+
+
+
+    }
+
+</table>

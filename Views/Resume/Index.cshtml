@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Резюме";
+    if (HttpContext.Current.User.IsInRole("Admin"))
+    {
+        Layout = "~/Views/Shared/_adminlayout.cshtml";
+    }
+
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}
+
+
+
+ 
+   
+    
+    <div id="textrezume">
+       
+        @Html.Raw(ViewData["textrezume"])
+        <div class="downloadrezume">
+        @Html.ActionLink("Скачть .doc", "../Storage/Резюме Сыса О.А(jun .Net).doc")
+    </div>
+      <div class="downloadrezume" style="top:10%">
+        @Html.ActionLink("Скачать .pdf","../Storage/Резюме_Сыса_О.А_(jun .Net).pdf")
+    </div>
+    </div>
+              

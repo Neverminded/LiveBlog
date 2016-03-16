@@ -1,0 +1,82 @@
+﻿@model MyBlog.Models.Record
+@using MyBlog.Core;
+
+@{
+    ViewBag.Title = "LifeBlog: " + ViewData["CategoryTitle"];
+    if (HttpContext.Current.User.IsInRole("Admin"))
+    {
+        Layout = "~/Views/Shared/_adminlayout.cshtml";
+    }
+
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}
+@using MyBlog.Models;
+
+<h2>@ViewBag.Message</h2>
+
+
+
+@if (((IEnumerable<Record>)ViewData["list"]).Count() != 0)
+{
+    foreach (var r in (IEnumerable<Record>)ViewData["list"])
+    {
+   
+    <div class="record">
+        <p id="datepublicrecord">
+            Опубликовано: @r.DateCreate.ToLongDateString()
+        </p>
+         <span>
+             @Html.Raw(Html.ActionLink(r.Title, "GetRecord", "Record", new { id = r.Id_Record }, null))
+        </span>
+
+        <div id="textrecord">
+
+            @Html.Raw(r.PreviewText)  @Html.ActionLink("Читать полностью", "GetRecord", "Record", new { id = r.Id_Record }, null)
+
+
+        </div>
+
+
+
+        <div id="btmrecstr" class="bottomrecordstring">
+
+            @foreach (var item in (IEnumerable<Categories>)ViewData["categories"])
+            {
+                if (item.Id_Category == r.Category_Id)
+                {
+                <p>
+                    Категория: @item.NameCategory
+                </p>
+                }
+            }
+            <div id="commentcount">
+
+                @foreach (var item in (IEnumerable<RecordIdForComment>)ViewData["commentCount"])
+                {
+                    if (r.Id_Record == item.IdRecord)
+                    {
+                    <p>
+                        @String.Format("Комментарии: ({0})", item.CountComment)
+                    </p>
+                        
+                         
+                    }
+
+                }
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+    
+ 
+    }
+}
+else
+{<p>По данной категори статей не найдено</p>}

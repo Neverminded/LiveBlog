@@ -1,0 +1,1145 @@
+﻿/*----------------------------------------------------------
+The base color for this template is #5c87b2. If you'd like
+to use a different color start by replacing all instances of
+#5c87b2 with your new color.
+----------------------------------------------------------*/
+@font-face {
+    font-family: 'icomoon';
+    src:url('../fonts/icomoon/icomoon.eot');
+    src:url('../fonts/icomoon/icomoon.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon/icomoon.woff') format('woff'),
+        url('../fonts/icomoon/icomoon.ttf') format('truetype'),
+        url('../fonts/icomoon/icomoon.svg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    src: local("LetoOneDefect"), /* проверяем наличие шрифта в ОС пользователя */
+    url(LetoOneDefect.otf);
+    font-family: LetoOneDefect;
+    src: local("LetoOneDefect"), url('/Content/Fonts/leto one defect/LetoOneDefect.otf');
+}
+
+@font-face {
+
+    src: local("drugsthin"), /* проверяем наличие шрифта в ОС пользователя */
+         url(drugsthin.otf);
+    font-family: drugsthin;
+    src: local("drugsthin"),
+         url('/Content/Fonts/drugs-thin/drugsthin.otf');
+   
+}
+
+
+
+@font-face {
+    src: local("GeoSans"), /* проверяем наличие шрифта в ОС пользователя */
+         url(GeosansLight.ttf);
+    font-family: GeoSans;
+    src: local("GeosansLight"),
+         url('/Content/Fonts/Geo_Sans_Light/GeosansLight.ttf');
+}
+
+
+@font-face {
+    src: local("Blogger"), /* проверяем наличие шрифта в ОС пользователя */
+         url(Blogger.otf);
+    font-family: Blogger;
+    src: local("Blogger"),
+         url('/Content/Fonts/Blogger/Blogger.otf');
+}
+
+
+
+@font-face {
+    src: local("Kelson"), /* проверяем наличие шрифта в ОС пользователя */
+         url(Kelson.otf);
+    font-family: Kelson;
+    src: local("Kelson"),
+         url('/Content/Fonts/Kelson/Kelson.otf');
+}
+
+
+@font-face {
+    src: local("Berlin Email"), /* проверяем наличие шрифта в ОС пользователя */
+         url("Berlin Email.ttf");
+    font-family: BerlinEmail;
+    src: local("Berlin Email"),
+         url('/Content/Fonts/BerlinEmail/Berlin Email SemiBold.ttf');
+}
+
+@font-face {
+    src: local("UskIScNm"), /* проверяем наличие шрифта в ОС пользователя */
+         url("UskIScNm.ttf");
+    font-family: UskIScNm;
+    src: local("UskIScNm"),
+         url('/Content/Fonts/Usk/UskIScNm.ttf');
+}
+
+@font-face {
+   
+    font-family: eurofurence;
+    src: local("eurofurence"),
+         url('/Content/Fonts/eurofurence/c4dasT8j.ttf');
+}
+
+
+
+html {
+height:100%;
+ 
+}
+body {
+  background-image:url("/Content/Images/ght.jpg");
+  font-size: .85em;
+  font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
+ 
+ 
+  margin:0px;
+  padding:0px;
+  background-size: cover;
+  background-attachment: fixed;
+  
+ 
+}
+
+@media (max-width:920px) {
+        body {
+            
+           background-image:url("/Content/Images/image2.jpg");
+        }
+    }
+
+@media (max-width:520px) {
+        body {
+            
+           background-image:url("/Content/Images/image5.jpg");
+        }
+    }
+
+
+
+a:link {
+    color: #034af3;
+    text-decoration: underline;
+}
+
+a:visited {
+
+    color: #505abc;
+}
+
+
+a:hover {
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active {
+
+    color: #12eb87;
+}
+
+p, ul {
+    margin-bottom: 0px;
+    line-height: 1.6em;
+}
+
+
+header,
+footer,
+nav,
+section {
+    display: block;
+}
+
+/* HEADINGS   
+----------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5em;
+    color: #000;
+}
+
+h1 {
+    font-size: 2em;
+    position:relative;
+    top:100px;
+    color:rgba(104, 88, 211, 0.92);
+  
+   font-family:GeoSans, 'Comic Sans MS', cursive;
+}
+
+
+
+h2 {
+    padding: 0 0 20px 0;
+}
+
+h3 {
+    font-size: 1.2em;
+    margin-top:20px;
+}
+
+h4 {
+    font-size: 1.1em;
+}
+
+h5, h6 {
+    font-size: 1em;
+}
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+/* you can specify a greater or lesser percentage for the 
+page width. Or, you can specify an exact pixel width. */
+
+
+
+.page {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    border-radius: 5px;
+     margin-top:60px;
+   position: relative;
+  min-height: 80%;
+   
+}
+
+@media (max-width:920px) {
+        .page {
+            
+            margin-top:10px;
+        }
+    }
+
+
+header, #header {
+    
+   
+   position:fixed;
+    color: #000;
+    background-color:rgba(12, 2, 2, 0.68);
+    background-position: 0 100%;
+    height:90px;
+    background-size:cover;
+    width:100%;
+    border-bottom: 3px solid red;
+}
+
+    header h1, #header h1 {
+        font-weight: bold;
+        padding: 2px 0;
+        margin: 0;
+        color: white;
+        border: none;
+        font-size: 32px;
+        text-shadow: 1px 1px 2px #111;
+
+    }
+
+#main {
+    
+    border-radius: 7px;
+     padding:2px;
+     background-color: rgba(12, 2, 2, 0.68);
+     width:85%;
+     margin-left:0.5%;
+    
+    
+    
+}
+
+ @media (max-width:920px) {
+        #main {
+            width:100%;
+            margin-left:0px;
+            margin-top:10px;
+        }
+    }
+
+.hFooter { 
+height: 30px; 
+	}
+footer,
+#footer {
+    color: rgba(199, 234, 18, 0.48);
+    text-align: center;
+    line-height: normal;
+    font-size: .9em; 
+   width:100%;
+   margin-top:auto;
+    margin-bottom:0px;
+      height: 50px; 
+    
+   
+    
+   
+}
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+/* FORM LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+textarea {
+    min-height: 75px;
+     width:50%;
+     height:200px;
+    
+    margin-left: 250px;
+    border: 1px solid #8175ee;
+    border-radius:5px;
+    
+}
+
+.textarea p {
+line-height:40px;
+}
+
+input[type="text"],
+input[type="password"] {
+    border: 1px solid #ccc;
+    padding: 2px;
+    font-size: 1.2em;
+    color: #444;
+    width: 150px;
+}
+
+select {
+    border: 1px solid #ccc;
+    padding: 2px;
+    font-size: 1.2em;
+    color: #444;
+}
+
+input[type="submit"] {
+    font-size: 1.2em;
+    padding: 5px;
+}
+
+
+/*Image
+ --------------------------------------------------------  */
+.img {
+border: 2px solid red;
+
+}
+
+
+/* TABLE
+----------------------------------------------------------*/
+
+table {
+    border: solid 2px #2578cc;
+    border-collapse: collapse;
+    width: 95%;
+margin: 5px;
+}
+
+    table td {
+        padding: 5px;
+       color:white;
+    }
+
+    table th {
+        padding: 6px 5px;
+        text-align: left;
+        background-color: rgba(34, 2, 2, 0.23);
+        border: solid 1px #e8eef4;
+
+    }
+    /*FORM
+        ---------------------------------------------------*/
+form {
+padding:30px;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+.clear {
+    clear: both;
+}
+
+.error {
+    color: Red;
+}
+
+nav,
+#menucontainer {
+    margin-top: 0px;
+}
+
+div#title {
+   
+    text-align: center;
+  
+}
+
+#logindisplay {
+    
+    font-size: 1.0em;
+    display: block;
+    float:right;
+    right:130px;
+    margin-top:110px;
+    color: white;
+    position:fixed;
+}
+
+    #logindisplay a:link {
+        
+        color: white;
+        text-decoration: underline;
+    }
+
+    #logindisplay a:visited {
+        color: white;
+        text-decoration: underline;
+    }
+
+    #logindisplay a:hover {
+        color: white;
+        text-decoration: none;
+    }
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #9cafeb;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+/* Styles for editor and display helpers
+----------------------------------------------------------*/
+.display-label,
+.editor-label {
+    font-weight: 700;
+    padding: 0 0 10px 0;
+    margin: 1em 0 0 0;
+}
+
+.display-field,
+.editor-field {
+    font:12px Arial, Helvetica,sans-serif;
+     color:#ffffff;
+    margin: 0.5em 0 0 0;
+    
+}
+
+.text-box {
+    width: 30em;
+}
+
+    .text-box.multi-line {
+        height: 6.5em;
+    }
+
+.tri-state {
+    width: 6em;
+}
+
+
+/*Record Styles
+ --------------------------------------------------*/
+.headrecord {
+    font-size: 20px;
+    text-align:center;
+    
+     font:3em/120% "Times New Roman",Times,serif;
+     margin-bottom:20px;
+}
+
+.record {
+    margin: 0px 5px 20px 5px;
+        padding: 5px;
+    border-radius: 2px;
+     border-bottom: 1px solid #2c75ba;
+     
+}
+.record span a{
+    text-decoration:none;
+     color:white;
+     font-size:2.2em;
+}
+.record span a:hover{
+    
+     color:rgb(153, 173, 208);
+    
+}
+
+#textrecord {
+font:12px Arial, Helvetica,sans-serif;
+     color:#ffffff;
+}
+
+
+    #textrecord a {
+        
+     text-decoration: none;
+    font-size: 12px;
+    color: #a3d33c;
+    
+    }
+
+#datepublicrecord {
+ 
+    font-size:12px;
+     color: #a3d33c;
+    
+}
+
+/*comment
+ -----------------------------------------------*/
+#headercomment {
+margin-left:100px;
+margin-top:30px;
+ font:2em/100% "Times New Roman",Times,serif;
+
+}
+.comment {
+    margin-left: 50px;
+    margin-bottom: 30px;
+   border-bottom: 1px solid white;
+height: 100px;
+width: 80%
+}
+
+
+
+#commentcount {
+    display: inline;
+    float:right;
+}
+
+@media (max-width:480px) {
+        #commentcount {
+           display:block;
+           margin-left:0px;
+           float:initial;
+        } 
+
+    }
+
+.bottomrecordstring {
+    margin-top:30px;
+    background-color: rgba(85, 86, 91, 0.41);
+    line-height: normal;
+    
+    font-size: 12px;
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    
+    border-radius: 7px;
+}
+
+
+
+#btmrecstr p {
+    margin: 5px 6px 3px 8px;
+    display: inline;
+     color: #a3d33c;
+}
+
+#btmrecstr a {
+    text-decoration:none;
+     color: yellow;
+}
+
+#datepublicrecord {
+
+color:yellow;
+margin-left:20px;
+display:inline;
+}
+
+@media (max-width:480px) {
+        #datepublicrecord {
+           display:block;
+           margin-left:7px;
+        } 
+
+    }
+
+.partialrecordtext {
+    color: #d1dc8c;
+    text-decoration: none;
+}
+
+
+/*страница представления одной записи*/
+
+#formrecord {
+    padding: 20px;
+}
+
+
+
+
+/*startpage основная стартовая страница*/
+
+.startpage {
+background: teal url("/Content/Images/Fabric.jpg");
+
+
+}
+
+.bodystart {
+     background: url("/Content/Images/mitsubishi_lancer.jpg");
+    font-size: .85em;
+    font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
+  width: 100%;
+  text-align: center;
+  height:50%;
+ 
+}
+
+
+
+/*Breadcrums
+    ---------------------------------------------------*/
+
+#crumbsstyle {
+margin-left: 30px;
+width: auto;
+color:white;
+margin-top:40px;
+position:fixed;
+
+
+}
+    #crumbsstyle a {
+    color:orange;
+    
+    }
+
+
+    /*editmenu
+        ------------------------------------------------*/
+
+#editmenu {
+
+left:0;
+min-height:100%;
+width:14%;
+top:50px;
+background-color: rgba(12, 2, 2, 0.68);
+border-right:1px solid red;
+position:fixed;
+
+}
+
+#editmenu a {
+    color:white;
+    margin-left:15px;
+}
+
+@media (max-width:1200px) {
+    #editmenu a {
+    
+    font-size:0.8em;
+    }
+}
+
+
+
+/*Rezume
+ ------------------------------------------*/
+#textrezume {
+
+     color:#ffffff;
+padding:20px;
+   
+}
+
+.downloadrezume {
+width:100px;
+height:20px;
+border-radius:5px;
+
+  
+}
+
+    .downloadrezume a {
+     text-decoration: none;
+    color:yellow;
+ position: relative; /* Относительное позиционирование */
+    top: 3px;
+    left: 20px;
+    
+    }
+
+    .downloadrezume a:hover{
+    
+    font: solid 15px;
+    color:red;
+    }
+
+  
+
+#startpageheader {
+     color: #000;
+    background-image:url("/Content/Images/2.jpg");
+    background-size:cover;
+    border-radius: 7px;
+    width:100%;
+   position:fixed;
+   background-position-y:100%;
+
+
+}
+
+#headerlogo {
+
+
+    color:white;
+    font-size:1.5em;
+    float:left;
+    margin-top:10px;
+    margin-left:5px;
+font-family:Kelson;
+
+
+
+}
+
+
+
+    /*Категории
+     --------------------------------*/
+
+    #categories {
+width:13%;
+height:650px;
+ 
+ 
+
+
+  position:fixed;
+  right:0.5%;
+  margin-top:70px;
+ 
+  
+}
+
+    @media (max-width:920px) {
+    #categories {
+    
+    display:none;
+    }
+}
+
+     
+
+
+
+    #hcategory {
+       font-family: Kelson;
+   font-size:1.2em;
+    text-decoration:none;
+    color:white;
+    text-align:center;
+    }
+
+ #categories ul li {
+     list-style-type: none;
+     height:30px;
+     border-bottom: 1px solid #a7c8be;
+}
+
+#categories ul li a{
+
+ text-decoration:none;
+margin-right:5%;
+        color: white;
+        font-family:Kelson;
+        font-size: 1.1em;
+        float:left;
+        margin-left:10px;
+
+}
+
+@media (max-width:1200px) {
+    #categories li a{
+    
+    font-size:0.9em;
+    }
+}
+
+  
+
+     #categories li a:hover {
+        
+    font-size: 1.5em;
+    color:white;
+     font-family:Kelson;
+    }
+
+     #categories li:hover {
+        
+   
+    background-color:rgb(246, 47, 3);
+    
+    }
+
+     @media (max-width:1200px) {
+    #categories li a:hover{
+    
+    font-size:1.1em;
+    }
+}
+
+#finder {
+    width:14%;
+    height:60px;
+    right:0;
+    
+    padding-right:2px;
+     position:fixed;
+     
+
+}
+
+ #finder input {
+           
+            margin-left: 5px;
+             
+             width:90%;
+             height:25px;
+             
+        font-size: 15px;
+        text-shadow: 0px 1px 0px #fff;
+        outline: none;
+        background: -webkit-gradient(linear, left top, left bottom, from(#bcbcbe), to(#ffffff));
+        background: -moz-linear-gradient(top,  #bcbcbe,  #ffffff);
+        border-radius: 3px;
+        border: 0.5px solid #717171;
+        box-shadow:  1px 1px 0px #efefef;
+
+
+        }
+
+@media (max-width:920px) {
+    #finder {
+        position:inherit;
+       left:50px;
+      width:90%;
+      display:inline-block;
+       margin-top:55px;
+    }
+        #finder input {
+       float:none;
+         width:60%;
+         margin-left:initial;
+         display:inline;
+        }
+        #finder img {
+        float:left;
+        margin-right:initial;
+        border-left:1px solid red;
+border-right:initial;
+        }
+    }
+
+       
+
+
+
+
+
+/*Rss feed style------------------------------------------*/
+
+#rss {
+width:8%;
+height:25px;
+background-color:transparent;
+right:0.5%;
+margin-top:10px;
+  border-radius:5px;
+  position:fixed;
+   border:solid 1px red;
+
+}
+
+  
+
+
+    #rss a {
+    color:white;
+    position:relative;
+     text-decoration:none;
+   top:5px;
+   left:7px;
+   font-size:0.8em;
+    }
+        #rss:hover {
+       color:yellow;
+       font-size: 1.1em;
+       background-color:rgba(246, 0, 0, 0.72);
+        }
+   
+
+          @media (max-width:920px) {
+        #rss {
+           display:none;
+        } 
+
+        
+
+    }
+@media (max-width:1200px) {
+ #rss a{
+           font-size:80%;
+        } 
+
+}
+
+
+#rssbutton {
+
+  display: none;
+  float: right;
+  margin-top: 9px;
+  margin-right: 15px;
+  width: 25px;
+  height: 25px;
+}
+
+@media (max-width:920px) {
+    #rssbutton {
+    display:inherit;
+    padding:0;
+    }
+   
+
+    #rssbutton img {
+        
+    width:100%;
+    height:100%;
+    }
+
+}
+
+
+#rssbutton2 {
+    margin-top:10px;
+   float: right;
+margin-right: 0.5%;
+    background-color:transparent;
+}
+
+@media (max-width:920px) {
+    #rssbutton2 {
+        display: none;
+    }
+}
+#findbutton {
+
+    display: none;
+  float: right;
+  margin-top: 9px;
+  margin-right: 15px;
+  width: 25px;
+  height: 25px;
+  border:1px solid red;
+  border-radius:3px;
+}
+
+@media (max-width:920px) {
+    #findbutton {
+    display:inherit;
+    padding:0;
+    }
+   
+
+    #findbutton img {
+        
+    width:95%;
+    height:95%;
+    }
+
+}
+
+
+
+
+
+
+
+
+/*-----------------------------------------*/
+#Aboutmain {
+    
+     padding:2px;
+     width:1300px;
+     margin-left:5px;
+     background-color:rgba(0, 0, 0, 0.57);
+     border-radius:5px;
+     
+}
+
+    #Aboutmain p {
+    font-size:1.3em;
+    font-family: Blogger;
+    color:#c3c0c0;
+    
+    }
+
+#social {
+right:20%;
+margin-top:30px;
+
+height:30px;
+width:120px;
+
+
+
+}
+
+
+
+
+
+#social iframe {
+margin-left:3px;
+margin-top:1px;
+}
+    #social a {
+    float:left;
+    }
+
+    
+
+
+#mailarea {
+margin-left:30px; 
+width:900px;
+height:250px;
+
+}
+
+#rightpanel {
+right:0;
+min-height:100%;
+width:14%;
+top:50px;
+background-color: rgba(12, 2, 2, 0.90);
+border-left:1px solid red;
+position:fixed;
+}
+
+ @media (max-width:920px) {
+        #rightpanel {
+           display:none;
+        } 
+
+    }
+
+#demo {
+margin-left:20%;
+margin-top: 10px;
+width:80%;
+}
+
+    #demo input {
+    
+   
+
+height: 25px;
+font-size: 15px;
+text-shadow: 0px 1px 0px #FFF;
+outline: medium none;
+background: transparent -moz-linear-gradient(center top , #BCBCBE, #FFF) repeat scroll 0% 0%;
+border-radius: 3px;
+border: 0.5px solid #717171;
+box-shadow: 1px 1px 0px #EFEFEF;
+    }
+
+
+
+#UserName{
+ 
+             
+             width:40%;
+             height:25px;
+             
+        font-size: 15px;
+        text-shadow: 0px 1px 0px #fff;
+        outline: none;
+        background: -webkit-gradient(linear, left top, left bottom, from(#bcbcbe), to(#ffffff));
+        background: -moz-linear-gradient(top,  #bcbcbe,  #ffffff);
+        border-radius: 3px;
+        border: 0.5px solid #717171;
+        box-shadow:  1px 1px 0px #efefef;
+
+}
+
+#Password {
+     width:40%;
+             height:25px;
+             
+        font-size: 15px;
+        text-shadow: 0px 1px 0px #fff;
+        outline: none;
+        background: -webkit-gradient(linear, left top, left bottom, from(#bcbcbe), to(#ffffff));
+        background: -moz-linear-gradient(top,  #bcbcbe,  #ffffff);
+        border-radius: 3px;
+        border: 0.5px solid #717171;
+        box-shadow:  1px 1px 0px #efefef;
+
+
+}
+
+#ConfirmPassword {
+
+     width:40%;
+             height:25px;
+             
+        font-size: 15px;
+        text-shadow: 0px 1px 0px #fff;
+        outline: none;
+        background: -webkit-gradient(linear, left top, left bottom, from(#bcbcbe), to(#ffffff));
+        background: -moz-linear-gradient(top,  #bcbcbe,  #ffffff);
+        border-radius: 3px;
+        border: 0.5px solid #717171;
+        box-shadow:  1px 1px 0px #efefef;
+
+}
+
+hgroup {
+padding:30px;
+}

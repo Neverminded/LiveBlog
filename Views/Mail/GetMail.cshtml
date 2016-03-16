@@ -1,0 +1,54 @@
+﻿@model MyBlog.Models.MailResults
+
+@{
+    ViewBag.Title = "GetMail";
+    Layout = "~/Views/Shared/_adminlayout.cshtml";
+}
+
+
+
+<fieldset>
+    <legend>Детали письма</legend>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.NameSender)
+    </div>
+
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NameSender)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.EMailSender)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EMailSender)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.ThemeMail)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ThemeMail)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.TextSender)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TextSender)
+    </div>
+
+
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.TimeSending)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TimeSending)
+    </div>
+</fieldset>
+<p>
+
+    @Html.ActionLink("Назад к списку", "getMailsresult")
+</p>

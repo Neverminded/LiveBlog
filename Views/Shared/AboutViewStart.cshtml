@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <link href="../../Content/MainMenuScripts/MainMenu.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-2.1.3.js"></script>
+
+    <script src="~/Scripts/jquery-ui.min.js"></script>
+    <link href="~/Content/jquery-ui.css" rel="stylesheet" />
+    <link href="~/Content/jquery-ui.min.css" rel="stylesheet" />
+    <link href="~/Content/jquery-ui.structure.css" rel="stylesheet" />
+    <link href="~/Content/jquery-ui.structure.min.css" rel="stylesheet" />
+    <link href="~/Content/jquery-ui.theme.css" rel="stylesheet" />
+    <link href="~/Content/jquery-ui.theme.min.css" rel="stylesheet" />
+
+    @using System.Web.Mvc
+    @using MyBlog.Core;
+    @using MyBlog.Models;
+
+
+
+</head>
+<body>
+    <div id="header">
+
+
+        <div id="headerlogo">
+            Oleg S.Blog
+        </div>
+
+
+
+
+
+
+
+
+        <div id="menucontainer">
+            <ul id="nav">
+
+                <li>@Html.ActionLink("Статьи", "Index", "Home") </li>
+                <li>@Html.ActionLink("Rezume", "Index", "Resume")</li>
+                <li>@Html.ActionLink("О сайте", "About", "About")</li>
+                <li>@Html.ActionLink("Обратная связь", "Index", "Resume")</li>
+
+
+
+                @if (HttpContext.Current.User.IsInRole("Admin"))
+                {
+                         
+                    <li>@Html.ActionLink("Админ", "GetRecords", "Record")</li>
+                }
+
+
+            </ul>
+        </div>
+
+    </div>
+
+    <div id="rss">
+        @Html.ActionLink("Подписаться на RSS", "Rss")
+        <img style="float: right; margin-right: 3px; margin-top: 3px;" src="~/Storage/Img/rss.jpg" />
+    </div>
+    <div id="logindisplay">
+        @Html.Partial("_LoginPartial")
+    </div>
+
+
+    <div class="page">
+
+        <div id="finder">
+            <p style="margin-left: 20px;">Поиск по сайту:</p>
+            <input style="margin-left:20px;" type="text" id="searcher" data-autocomplete-source='@Url.Action("Search", "Home")' />
+
+        </div>
+
+
+
+        @if (@ViewBag.Action == "GetRecords" || @ViewBag.Action == "GetRecord" && HttpContext.Current.User.IsInRole("Admin"))
+        { 
+            <div id="editmenu">
+
+
+                <p>
+                    @Html.ActionLink("Редактировать резюме", "EditResume", "Resume")
+                </p>
+
+                <p>
+                    @Html.ActionLink("Управление категориями", "GetCategories", "Category")
+                </p>
+                <p>
+                    @Html.ActionLink("Создать статью", "AddRecord")
+                </p>
+                @if (@ViewBag.Action == "GetRecord")
+                { 
+                    <p>
+                        @Html.ActionLink("Редактировать статью", "EditRecord", new { id = Model.Id_Record })
+                    </p>
+            
+                }
+                <p>
+
+                    @Html.ActionLink("Назад к списку", "index", "Home", "style=color:white", null)
+                </p>
+            </div>
+         
+        }
+        <div id="categories">
+            <div id="hcategory">
+                Категории
+            </div>
+
+            @foreach (var item in (IEnumerable<Categories>)ViewData["categories"])
+            {
+                      
+                <p>
+                    - @Html.ActionLink(item.NameCategory, "FilterRecordsFromCategory", "Category", new { id = item.Id_Category }, null)
+                </p> 
+            }
+
+
+
+
+        </div>
+
+        <div id="Aboutmain">
+
+            @RenderBody()
+        </div>
+
+
+
+
+
+
+
+        <div class="hFooter"></div>
+
+
+    </div>
+
+    <div id="footer">
+        <p>
+            c 2015 Oleg S.Blog
+        </p>
+        <p>
+            Копирование материалов без разрешения автора и ссылки на блог запрещено.
+        </p>
+
+    </div>
+
+
+    <script type="text/javascript">
+
+        $(function () {
+
+            $("[data-autocomplete-source]").each(function () {
+                var target = $(this);
+                target.autocomplete({
+                    source: function (request, response) {
+                        // организуем кроссдоменный запрос 
+                        $.ajax({
+                            url: $("#searcher").attr("data-autocomplete-source"),
+                            dataType: "json",
+                            // параметры запроса, передаваемые на сервер (последний - подстрока для поиска):
+                            data: {
+
+                                featureClass: "P",
+                                style: "full",
+                                maxRows: 12,
+                                term: request.term
+                            },
+                            // обработка успешного выполнения запроса
+                            success: function (result) {
+                                // приведем полученные данные к необходимому формату и передадим в предоставленную функцию response
+                                response($.map(result, function (item) {
+
+                                    return {
+                                        label: item.Title,
+                                        value: item.CssClass,
+                                        value2: item.TypeName,
+                                        value3: item.Id
+
+                                    }
+                                }));
+                            }
+                        });
+                    },
+                    minLength: 2,
+                    select: function (event, ui) {
+
+                        if (ui.item.CssClass == 'recordsearch') window.location.href = '/Home/GetRecord?id=' + ui.item.Id;
+
+                        return false;
+                    }
+                }).data("ui-autocomplete")._renderItem = function (ul, item) {
+                    return $("<li style='width:200px;background-color:rgba(0, 0, 0, 0.88);'>").append("<span style=color:red margin-left:5px>" + item.value2 + "</span>" + "<a style=color:white href=Record/GetRecord/" + item.value3 + ">" + item.label + "</a>").appendTo(ul);
+                };
+
+
+
+            });
+
+        });
+
+
+    </script>
+
+
+</body>
+
+</html>
+

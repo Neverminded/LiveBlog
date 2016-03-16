@@ -1,0 +1,57 @@
+﻿@model MyBlog.Models.RegisterModel
+@{
+    ViewBag.Title = "LifeBlog: Регистрация";
+
+    if (HttpContext.Current.User.IsInRole("Admin"))
+    {
+        Layout = "~/Views/Shared/_adminlayout.cshtml";
+    }
+
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>Создание новой учетной записи.</h2>
+</hgroup>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+
+    <fieldset>
+        <legend>Форма регистрации</legend>
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.UserName)
+                <p>
+                    @Html.TextBoxFor(m => m.UserName)
+                </p>
+
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Password)
+                <p>
+                    @Html.PasswordFor(m => m.Password)
+                </p>
+
+            </li>
+            <li>
+                @Html.LabelFor(m => m.ConfirmPassword)
+                <p>
+                    @Html.PasswordFor(m => m.ConfirmPassword)
+                </p>
+
+            </li>
+        </ol>
+        <input type="submit" class="btn btn-danger" style="font-family: Kelson" value="Регистрация" />
+    </fieldset>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,82 @@
+﻿@model MyBlog.Models.MailResults
+
+@{
+    ViewBag.Title = "Index";
+    if (HttpContext.Current.User.IsInRole("Admin"))
+    {
+        Layout = "~/Views/Shared/_adminlayout.cshtml";
+    }
+
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}
+
+
+<script src="~/Scripts/MicrosoftAjax.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+<script src="~/Scripts/MicrosoftMvcAjax.js"></script>
+<h2 style="color:white;">Страничка связи с автором сайта1111</h2>
+
+
+<div id="MailResult" style="display:none">
+
+</div>
+@using (Ajax.BeginForm("MailSubmit", new AjaxOptions {HttpMethod="Post",UpdateTargetId="MailResult",OnSuccess="MailSuccess" }))
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>11Если Вам необходимо связаться с автором по каким либо вопросам вы можете воспользоваться данной формой!</legend>
+
+        <div class="editor-label">
+            @Html.Label("Bаше имя:")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NameSender)
+            @Html.ValidationMessageFor(model => model.NameSender)
+        </div>
+
+        <div class="editor-label">
+            @Html.Label("Адрес электронной почты:")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EMailSender)
+            @Html.ValidationMessageFor(model => model.EMailSender)
+        </div>
+
+        <div class="editor-label">
+            @Html.Label("Текст письма:")
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.TextSender, new { style="name:mailarea"})
+            @Html.ValidationMessageFor(model => model.TextSender)
+        </div>
+
+        
+
+          <button type="submit" class="btn btn-success">Отправить</button>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Главная страница", "Index","Home")
+</div>
+
+<script type="text/javascript">
+    function MailSuccess() {
+        var obj = document.getElementById("MailResult"); 
+       
+        if (obj.style.display != "block") {
+            obj.style.display = "block";
+            var link = document.createElement('a');
+            link.href = "@Url.Action("Index", "Home")";
+            link.innerHTML = "Главная страница";
+            link.style.display = "block";
+            link.style.color="white";
+            obj.appendChild(link);
+        }
+    }
+</script>
+

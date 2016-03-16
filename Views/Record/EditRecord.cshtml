@@ -1,0 +1,100 @@
+﻿@model MyBlog.Models.Record
+
+@{
+    ViewBag.Title = "EditRecord";
+    if (HttpContext.Current.User.IsInRole("Admin"))
+    {
+        Layout = "~/Views/Shared/_adminlayout.cshtml";
+    }
+
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}
+
+<h2>Редактирование статьи</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+<script src="../../Scripts/MicrosoftAjax.js"></script>
+<script src="../../Scripts/jquery.unobtrusive-ajax.min.js"></script>
+<script src="../../Scripts/MicrosoftMvcAjax.js"></script>
+<script src="../../Scripts/ckeditor/ckeditor.js"></script>
+<script src="../../Scripts/ckeditor/adapters/jquery.js"></script>
+<script type="text/javascript">
+    function CKupdate() {
+        for (instance in CKEDITOR.instances)
+            CKEDITOR.instances[instance].updateElement();
+
+        alert("ok");
+
+    }
+
+
+
+</script>
+
+
+<script type="text/javascript">
+    $(function () {
+        $('.material-inner-text').ckeditor({
+            filebrowserBrowseUrl: '/Scripts/Filemanager-master/index.html?type="Images"'
+
+        });
+
+    });
+
+</script>
+
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Record</legend>
+
+
+        @Html.HiddenFor(model => model.Id_Record)
+
+        <div class="editor-label">
+            Заголовок
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Title)
+            @Html.ValidationMessageFor(model => model.Title)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Text)
+        </div>
+
+
+        <textarea name="textar" style="color:black" class="material-inner-text">
+            @Model.Text
+    
+</textarea>
+        <div class="editor-label">
+            Предварительное описание
+        </div>
+        <textarea name="textar2" style="color:black" class="material-inner-text">
+            @Model.PreviewText
+    
+</textarea>
+
+
+
+
+
+
+
+        <p>
+            <input type="submit" value="Сохранить" onclick="CKupdate();" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Назад к списку", "GetRecords")
+</div>

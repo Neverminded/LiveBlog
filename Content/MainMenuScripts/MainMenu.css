@@ -1,0 +1,54 @@
+﻿@font-face {
+    src: local("GeoSans"), /* проверяем наличие шрифта в ОС пользователя */
+         url(GeosansLight.ttf);
+    font-family: GeoSans;
+    src: local("GeosansLight"),
+         url('/Content/Fonts/Geo_Sans_Light/GeosansLight.ttf');
+}
+
+@font-face {
+    src: local("Kelson"), /* проверяем наличие шрифта в ОС пользователя */
+         url(Kelson.otf);
+    font-family: Kelson;
+    src: local("Kelson"),
+         url('/Content/Fonts/Kelson/Kelson.otf');
+}
+
+@font-face {
+    src: local("Berlin Email"), /* проверяем наличие шрифта в ОС пользователя */
+         url("Berlin Email 2.ttf");
+    font-family: BerlinEmail;
+    src: local("Berlin Email"),
+         url('/Content/Fonts/BerlinEmail/Berlin Email 2.ttf');
+}
+
+@font-face {
+    src: local("UskIScNm"), /* проверяем наличие шрифта в ОС пользователя */
+         url("UskIScNm.ttf");
+    font-family: UskIScNm;
+    src: local("UskIScNm"),
+         url('/Content/Fonts/Usk/UskIScNm.ttf');
+}
+
+@font-face {
+  
+    font-family: champagne;
+    src: local("champagne"),
+         url('/Content/Fonts/Champagne/9H4Dcd2L.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+#nav li welcome {
+
+    margin-bottom:10px;
+
+}
+       

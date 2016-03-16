@@ -1,0 +1,16 @@
+﻿<div id="targetajax2">
+    @foreach (var r in (IEnumerable<MyBlog.Models.Comment>)ViewData["comments"])
+    {
+        <div class="comment">
+            <p>
+                от @r.NameAuthorComment
+            </p>
+            <p>
+                @r.Text
+            </p>
+
+        </div>
+            
+    }
+</div>
+

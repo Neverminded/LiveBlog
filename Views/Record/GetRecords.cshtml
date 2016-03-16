@@ -1,0 +1,55 @@
+﻿@model MyBlog.Models.Record
+@using MyBlog.Models;
+@{
+    ViewBag.Title = "Мои статьи";
+    ViewBag.Action = "GetRecords";
+    if (HttpContext.Current.User.IsInRole("Admin"))
+    {
+        Layout = "~/Views/Shared/_adminlayout.cshtml";
+    }
+
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td>Название
+        </td>
+        <td>Дата публикуации
+        </td>
+    </tr>
+
+
+    @foreach (var r in (IEnumerable<Record>)ViewData["list"])
+    {
+        <tr>
+            <td>
+                @Html.ActionLink("Удалить", "DeleteRecord", new { id = r.Id_Record })
+            </td>
+            <td>
+                @Html.ActionLink("Открыть", "GetRecord", new { id = r.Id_Record })
+            </td>
+            <td>
+                @r.Title
+            </td>
+            <td>
+                @r.DateCreate.ToLongDateString()
+
+            </td>
+        </tr>
+    
+    }
+
+
+
+
+</table>
+

@@ -1,0 +1,24 @@
+﻿<div id="targetajax">
+    @foreach (var r in (IEnumerable<MyBlog.Models.Comment>)ViewData["comments"])
+    {
+        <div class="comment">
+            <p>
+                прокомментировал(а): @r.NameAuthorComment
+            </p>
+
+            <p>
+                @r.Text
+            </p>
+            <p>
+                @DateTime.Now.ToLongDateString()
+            </p>
+            @if (HttpContext.Current.User.IsInRole("admin"))
+            { 
+                @Ajax.ActionLink("Удалить", "DeleteComment", "Comment", new { id = r.Id_Comment, idrec = r.IdRecord }, new AjaxOptions { UpdateTargetId = "targetajax", HttpMethod = "POST" })
+            }
+        </div>
+            
+    }
+</div>
+
+

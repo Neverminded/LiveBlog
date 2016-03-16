@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "GetUsers";
+}
+
+<h2>Пользователи</h2>
+
+<table>
+
+    <tr>
+        <td></td>
+        <td>Имя пользователя
+        </td>
+
+    </tr>
+
+
+    @foreach (var r in (IEnumerable<MyBlog.Models.UserProfile>)ViewData["Users"])
+    {
+        <tr>
+            <td>
+                @Html.ActionLink("Удалить", "DeleteUser", new { id = r.UserId })
+            </td>
+
+            <td>
+                @r.UserName
+            </td>
+
+        </tr>
+    
+    }
+
+
+
+
+</table>
+

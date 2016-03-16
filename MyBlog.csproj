@@ -1,0 +1,1567 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{082FECC3-2A8C-494D-8741-146E5CD7E6D0}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyBlog</RootNamespace>
+    <AssemblyName>MyBlog</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\..\..\..\..\Олег\documents\visual studio 2012\Projects\MyBlog\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\..\..\..\Олег\documents\visual studio 2012\Projects\MyBlog\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\..\..\Олег\documents\visual studio 2012\Projects\MyBlog\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Олег\documents\visual studio 2012\Projects\MyBlog\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\..\..\..\Олег\documents\visual studio 2012\Projects\MyBlog\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Олег\documents\visual studio 2012\Projects\MyBlog\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Олег\documents\visual studio 2012\Projects\MyBlog\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\..\..\..\Олег\documents\visual studio 2012\Projects\MyBlog\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\..\..\..\..\..\Олег\documents\visual studio 2012\Projects\MyBlog\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\..\..\..\Олег\documents\visual studio 2012\Projects\MyBlog\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\..\..\..\Олег\documents\visual studio 2012\Projects\MyBlog\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\..\..\..\Олег\documents\visual studio 2012\Projects\MyBlog\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\..\..\..\Олег\documents\visual studio 2012\Projects\MyBlog\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\..\..\..\Олег\documents\visual studio 2012\Projects\MyBlog\packages\Microsoft.AspNet.WebPages.Data.2.0.20710.0\lib\net40\WebMatrix.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebPages.OAuth, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\..\..\..\Олег\documents\visual studio 2012\Projects\MyBlog\packages\Microsoft.AspNet.WebPages.OAuth.2.0.20710.0\lib\net40\Microsoft.Web.WebPages.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\..\..\..\Олег\documents\visual studio 2012\Projects\MyBlog\packages\Microsoft.AspNet.WebPages.WebData.2.0.20710.0\lib\net40\WebMatrix.WebData.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\..\..\..\Олег\documents\visual studio 2012\Projects\MyBlog\packages\DotNetOpenAuth.AspNet.4.0.3.12153\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\..\..\..\Олег\documents\visual studio 2012\Projects\MyBlog\packages\DotNetOpenAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\..\..\..\Олег\documents\visual studio 2012\Projects\MyBlog\packages\DotNetOpenAuth.OAuth.Consumer.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\..\..\..\Олег\documents\visual studio 2012\Projects\MyBlog\packages\DotNetOpenAuth.OAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\..\..\..\Олег\documents\visual studio 2012\Projects\MyBlog\packages\DotNetOpenAuth.OpenId.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\..\..\..\Олег\documents\visual studio 2012\Projects\MyBlog\packages\DotNetOpenAuth.OpenId.RelyingParty.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\..\..\..\..\..\Олег\documents\visual studio 2012\Projects\MyBlog\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\..\..\..\..\..\Олег\documents\visual studio 2012\Projects\MyBlog\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\CommentController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MailController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Controllers\RecordController.cs" />
+    <Compile Include="Controllers\ResumeController.cs" />
+    <Compile Include="Core\CategoriesFilterAttribute.cs" />
+    <Compile Include="Core\MyControllerFactory.cs" />
+    <Compile Include="Core\RecordIdForComment.cs" />
+    <Compile Include="Core\RssViewResult.cs" />
+    <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\CategoryRepository.cs" />
+    <Compile Include="Models\CommentRepository.cs" />
+    <Compile Include="Models\DataManager.cs" />
+    <Compile Include="Models\MailRepository.cs" />
+    <Compile Include="Models\MembershipRepository.cs" />
+    <Compile Include="Models\MyDBObjectsLINQ.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyDBObjectsLINQ.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsersRepository.cs" />
+    <Compile Include="Models\RecordRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scripts\Filemanager-master\connectors\mvc\FilemanagerAreaRegistration.cs" />
+    <Compile Include="Scripts\Filemanager-master\connectors\mvc\FilemanagerController.cs" />
+    <Compile Include="SearchEngine\CommentSearch.cs" />
+    <Compile Include="SearchEngine\RecordSearch.cs" />
+    <Compile Include="SearchEngine\SearchItem.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\DampDBblog.sql" />
+    <Content Include="Content\Fonts\BerlinEmail\Creative Commons Lizenz.txt" />
+    <Content Include="Content\Images\123123.jpg" />
+    <Content Include="Content\Images\1600x900 %2812%29.jpg" />
+    <Content Include="Content\Images\1600x900 %2813%29.jpg" />
+    <Content Include="Content\Images\1600x900 %2814%29.jpg" />
+    <Content Include="Content\Images\1600x900 %2816%29.jpg" />
+    <Content Include="Content\Images\1600x900 %2817%29.jpg" />
+    <Content Include="Content\Images\1600x900 %2818%29.jpg" />
+    <Content Include="Content\Images\1600x900 %2819%29.jpg" />
+    <Content Include="Content\Images\1600x900 %2820%29.jpg" />
+    <Content Include="Content\Images\1600x900 %2821%29.jpg" />
+    <Content Include="Content\Images\1600x900 %2822%29.jpg" />
+    <Content Include="Content\Images\1600x900 %2823%29.jpg" />
+    <Content Include="Content\Images\1600x900 %2824%29.jpg" />
+    <Content Include="Content\Images\1600x900 %2825%29.jpg" />
+    <Content Include="Content\Images\1600x900 %2826%29.jpg" />
+    <Content Include="Content\Images\1600x900 %2827%29.jpg" />
+    <Content Include="Content\Images\1600x900 %2828%29.jpg" />
+    <Content Include="Content\Images\2.jpg" />
+    <Content Include="Content\Images\222222.jpg" />
+    <Content Include="Content\Images\22222211.jpg" />
+    <Content Include="Content\Images\4545.jpg" />
+    <Content Include="Content\Images\4646.jpg" />
+    <Content Include="Content\Images\819980.jpg" />
+    <Content Include="Content\Images\back.gif" />
+    <Content Include="Content\Images\Back.jpg" />
+    <Content Include="Content\Images\Black.jpg" />
+    <Content Include="Content\Images\black2.jpg" />
+    <Content Include="Content\Images\Freeman.jpg" />
+    <Content Include="Content\Images\ght.jpg" />
+    <Content Include="Content\Images\headcyti.jpg" />
+    <Content Include="Content\Images\Headers\1221.jpg" />
+    <Content Include="Content\Images\Headers\HeadBlog.jpg" />
+    <Content Include="Content\Images\Headers\HeaderMain.jpg" />
+    <Content Include="Content\Images\Headers\sdfsd.jpg" />
+    <Content Include="Content\Images\Headers\SOAHead.jpg" />
+    <Content Include="Content\Images\Headers\TitleSOA.jpg" />
+    <Content Include="Content\Images\Headers\tre.jpg" />
+    <Content Include="Content\Images\Headers\tttsdfdfgt.jpg" />
+    <Content Include="Content\Images\Headers\Untitled-1.jpg" />
+    <Content Include="Content\Images\Headers\Untitled-22.jpg" />
+    <Content Include="Content\Images\texture2.jpg" />
+    <Content Include="Content\Images\уууу.jpg" />
+    <Content Include="Content\jquery-ui.css" />
+    <Content Include="Content\jquery-ui.min.css" />
+    <Content Include="Content\jquery-ui.structure.css" />
+    <Content Include="Content\jquery-ui.structure.min.css" />
+    <Content Include="Content\jquery-ui.theme.css" />
+    <Content Include="Content\jquery-ui.theme.min.css" />
+    <Content Include="Content\MainMenuScripts\MainMenu.css" />
+    <Content Include="Content\rezume.txt" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\themes\base\accordion.css" />
+    <Content Include="Content\themes\base\all.css" />
+    <Content Include="Content\themes\base\autocomplete.css" />
+    <Content Include="Content\themes\base\base.css" />
+    <Content Include="Content\themes\base\button.css" />
+    <Content Include="Content\themes\base\core.css" />
+    <Content Include="Content\themes\base\datepicker.css" />
+    <Content Include="Content\themes\base\dialog.css" />
+    <Content Include="Content\themes\base\draggable.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\menu.css" />
+    <Content Include="Content\themes\base\progressbar.css" />
+    <Content Include="Content\themes\base\resizable.css" />
+    <Content Include="Content\themes\base\selectable.css" />
+    <Content Include="Content\themes\base\selectmenu.css" />
+    <Content Include="Content\themes\base\slider.css" />
+    <Content Include="Content\themes\base\sortable.css" />
+    <Content Include="Content\themes\base\spinner.css" />
+    <Content Include="Content\themes\base\tabs.css" />
+    <Content Include="Content\themes\base\theme.css" />
+    <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\AutocompleteScripts\jquery-ui-1.8.17.custom.js" />
+    <Content Include="Scripts\AutocompleteScripts\jquery.ui.autocomplete.js" />
+    <Content Include="Scripts\AutocompleteScripts\jquery.ui.core.js" />
+    <Content Include="Scripts\AutocompleteScripts\jquery.ui.widget.js" />
+    <Content Include="Scripts\bootstrap 3\css\bootstrap-theme.css" />
+    <Content Include="Scripts\bootstrap 3\css\bootstrap.css" />
+    <Content Include="Scripts\bootstrap 3\css\MyStyleWithOverrideBootstrap.css" />
+    <Content Include="Scripts\bootstrap 3\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Scripts\bootstrap 3\js\bootstrap.js" />
+    <Content Include="Scripts\bootstrap 3\js\npm.js" />
+    <Content Include="Scripts\ckeditor\CHANGES.md" />
+    <Content Include="Scripts\ckeditor\LICENSE.md" />
+    <Content Include="Scripts\ckeditor\plugins\scayt\LICENSE.md" />
+    <Content Include="Scripts\ckeditor\plugins\scayt\README.md" />
+    <Content Include="Scripts\ckeditor\plugins\wsc\LICENSE.md" />
+    <Content Include="Scripts\ckeditor\plugins\wsc\README.md" />
+    <Content Include="Scripts\ckeditor\README.md" />
+    <Content Include="Scripts\ckeditor\samples\assets\posteddata.php" />
+    <Content Include="Scripts\ckeditor\samples\plugins\htmlwriter\assets\outputforflash\outputforflash.fla" />
+    <Content Include="Scripts\ckeditor\samples\sample_posteddata.php" />
+    <Content Include="Scripts\ckeditor\skins\moono\readme.md" />
+    <Content Include="Scripts\custom\jquery-ui.min.js" />
+    <Content Include="Scripts\custom\jquery.js" />
+    <Content Include="Scripts\Filemanager-master\.gitignore" />
+    <Content Include="Scripts\Filemanager-master\bower.json" />
+    <Content Include="Scripts\Filemanager-master\changelog" />
+    <Content Include="Scripts\Filemanager-master\composer.json" />
+    <Content Include="Scripts\Filemanager-master\connectors\ashx\filemanager.ashx" />
+    <Content Include="Scripts\Filemanager-master\ReadMe.md" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\.gitattributes" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\.gitignore" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\.travis.yml" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\AUTHORS" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\bin\authors.sh" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\bin\compress" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\bin\lint" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\bin\release" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\bin\source-highlight" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\bower.json" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\CONTRIBUTING.md" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\LICENSE" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\livescript\livescript.ls" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\package.json" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\README.md" />
+    <Content Include="Scripts\Filemanager-master\scripts\custom-scrollbar-plugin\.gitignore" />
+    <Content Include="Scripts\Filemanager-master\scripts\custom-scrollbar-plugin\bower.json" />
+    <Content Include="Scripts\Filemanager-master\scripts\custom-scrollbar-plugin\js\minified\jquery.mCustomScrollbar.min.js.gz" />
+    <Content Include="Scripts\Filemanager-master\scripts\custom-scrollbar-plugin\malihu-custom-scrollbar.jquery.json" />
+    <Content Include="Scripts\Filemanager-master\scripts\custom-scrollbar-plugin\package.json" />
+    <Content Include="Scripts\Filemanager-master\scripts\custom-scrollbar-plugin\readme.md" />
+    <Content Include="Scripts\Filemanager-master\scripts\dropzone\.gitignore" />
+    <Content Include="Scripts\Filemanager-master\scripts\dropzone\.tagconfig" />
+    <Content Include="Scripts\Filemanager-master\scripts\dropzone\.travis.yml" />
+    <Content Include="Scripts\Filemanager-master\scripts\dropzone\AMD_footer" />
+    <Content Include="Scripts\Filemanager-master\scripts\dropzone\AMD_header" />
+    <Content Include="Scripts\Filemanager-master\scripts\dropzone\bower.json" />
+    <Content Include="Scripts\Filemanager-master\scripts\dropzone\component.json" />
+    <Content Include="Scripts\Filemanager-master\scripts\dropzone\CONTRIBUTING.md" />
+    <Content Include="Scripts\Filemanager-master\scripts\dropzone\downloads\css\stylus\basic.styl" />
+    <Content Include="Scripts\Filemanager-master\scripts\dropzone\downloads\css\stylus\dropzone.styl" />
+    <Content Include="Scripts\Filemanager-master\scripts\dropzone\downloads\readme.md" />
+    <Content Include="Scripts\Filemanager-master\scripts\dropzone\Gruntfile.coffee" />
+    <Content Include="Scripts\Filemanager-master\scripts\dropzone\npm_publish.sh" />
+    <Content Include="Scripts\Filemanager-master\scripts\dropzone\package.json" />
+    <Content Include="Scripts\Filemanager-master\scripts\dropzone\readme.md" />
+    <Content Include="Scripts\Filemanager-master\scripts\dropzone\src\dropzone.coffee" />
+    <Content Include="Scripts\Filemanager-master\scripts\dropzone\test.sh" />
+    <Content Include="Scripts\Filemanager-master\scripts\dropzone\test\test.coffee" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\.gitignore" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\.jshintrc" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\.npmignore" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\.spmignore" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\.travis.yml" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\bower.json" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\composer.json" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\CONTRIBUTING.md" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\dist\.jshintrc" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\dist\ZeroClipboard.Core.min.map" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\dist\ZeroClipboard.min.map" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\docs\api\ZeroClipboard.Core.md" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\docs\api\ZeroClipboard.md" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\docs\instructions.md" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\docs\roadmap.md" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\docs\security.md" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\LICENSE" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\package.json" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\README.md" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\src\flash\ClipboardInjector.as" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\src\flash\JsProxy.as" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\src\flash\XssUtils.as" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\src\flash\ZeroClipboard.as" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\src\meta\bower.json.tmpl" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\src\meta\composer.json.tmpl" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\src\meta\LICENSE.tmpl" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\src\meta\source-banner.tmpl" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\test\.jshintrc" />
+    <Content Include="Scripts\Filemanager-master\userfiles\.htaccess" />
+    <Content Include="Scripts\Filemanager-master\userfiles\web.config" />
+    <Content Include="Scripts\Filemanager-master\utils\generate-lang.py" />
+    <Content Include="Scripts\Filemanager-master\utils\minify.py" />
+    <Content Include="Scripts\Filemanager-master\utils\path-info.odt" />
+    <Content Include="Scripts\Filemanager-master\utils\path-info.pdf" />
+    <Content Include="Content\Fonts\BerlinEmail\Berlin Email 2.ttf" />
+    <Content Include="Content\Fonts\BerlinEmail\Berlin Email Bold.ttf" />
+    <Content Include="Content\Fonts\BerlinEmail\Berlin Email Heavy.ttf" />
+    <Content Include="Content\Fonts\BerlinEmail\Berlin Email Schadow.ttf" />
+    <Content Include="Content\Fonts\BerlinEmail\Berlin Email SemiBold.ttf" />
+    <Content Include="Content\Fonts\BerlinEmail\Berlin Email.ttf" />
+    <Content Include="Content\Fonts\BerlinEmail\Berlin_Email_Wide_Semibold.ttf" />
+    <Content Include="Content\Fonts\Blogger\Blogger.otf" />
+    <Content Include="Content\Fonts\Champagne\9H4Dcd2L.ttf" />
+    <Content Include="Content\Fonts\eurofurence\c4dasT8j.ttf" />
+    <Content Include="Content\Fonts\Geo_Sans_Light\GeosansLight-Oblique.ttf" />
+    <Content Include="Content\Fonts\Geo_Sans_Light\GeosansLight.ttf" />
+    <Content Include="Content\Fonts\Kelson\Kelson.otf" />
+    <Content Include="Content\Fonts\Usk\UskIScNm.ttf" />
+    <Content Include="Content\Images\шапка.psd" />
+    <Content Include="Scripts\bootstrap 3\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\bootstrap 3\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Scripts\bootstrap 3\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Scripts\bootstrap 3\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\Fonts\drugs-thin\drugsthin.otf" />
+    <Content Include="Content\Fonts\leto one defect\LetoOneDefect.otf" />
+    <Content Include="Models\MyDBObjectsLINQ.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>MyDBObjectsLINQ.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\ckeditor\adapters\jquery.js" />
+    <Content Include="Scripts\ckeditor\build-config.js" />
+    <Content Include="Scripts\ckeditor\ckeditor.js" />
+    <Content Include="Scripts\ckeditor\config.js" />
+    <Content Include="Scripts\ckeditor\contents.css" />
+    <Content Include="Scripts\ckeditor\lang\af.js" />
+    <Content Include="Scripts\ckeditor\lang\ar.js" />
+    <Content Include="Scripts\ckeditor\lang\bg.js" />
+    <Content Include="Scripts\ckeditor\lang\bn.js" />
+    <Content Include="Scripts\ckeditor\lang\bs.js" />
+    <Content Include="Scripts\ckeditor\lang\ca.js" />
+    <Content Include="Scripts\ckeditor\lang\cs.js" />
+    <Content Include="Scripts\ckeditor\lang\cy.js" />
+    <Content Include="Scripts\ckeditor\lang\da.js" />
+    <Content Include="Scripts\ckeditor\lang\de.js" />
+    <Content Include="Scripts\ckeditor\lang\el.js" />
+    <Content Include="Scripts\ckeditor\lang\en-au.js" />
+    <Content Include="Scripts\ckeditor\lang\en-ca.js" />
+    <Content Include="Scripts\ckeditor\lang\en-gb.js" />
+    <Content Include="Scripts\ckeditor\lang\en.js" />
+    <Content Include="Scripts\ckeditor\lang\eo.js" />
+    <Content Include="Scripts\ckeditor\lang\es.js" />
+    <Content Include="Scripts\ckeditor\lang\et.js" />
+    <Content Include="Scripts\ckeditor\lang\eu.js" />
+    <Content Include="Scripts\ckeditor\lang\fa.js" />
+    <Content Include="Scripts\ckeditor\lang\fi.js" />
+    <Content Include="Scripts\ckeditor\lang\fo.js" />
+    <Content Include="Scripts\ckeditor\lang\fr-ca.js" />
+    <Content Include="Scripts\ckeditor\lang\fr.js" />
+    <Content Include="Scripts\ckeditor\lang\gl.js" />
+    <Content Include="Scripts\ckeditor\lang\gu.js" />
+    <Content Include="Scripts\ckeditor\lang\he.js" />
+    <Content Include="Scripts\ckeditor\lang\hi.js" />
+    <Content Include="Scripts\ckeditor\lang\hr.js" />
+    <Content Include="Scripts\ckeditor\lang\hu.js" />
+    <Content Include="Scripts\ckeditor\lang\id.js" />
+    <Content Include="Scripts\ckeditor\lang\is.js" />
+    <Content Include="Scripts\ckeditor\lang\it.js" />
+    <Content Include="Scripts\ckeditor\lang\ja.js" />
+    <Content Include="Scripts\ckeditor\lang\ka.js" />
+    <Content Include="Scripts\ckeditor\lang\km.js" />
+    <Content Include="Scripts\ckeditor\lang\ko.js" />
+    <Content Include="Scripts\ckeditor\lang\ku.js" />
+    <Content Include="Scripts\ckeditor\lang\lt.js" />
+    <Content Include="Scripts\ckeditor\lang\lv.js" />
+    <Content Include="Scripts\ckeditor\lang\mk.js" />
+    <Content Include="Scripts\ckeditor\lang\mn.js" />
+    <Content Include="Scripts\ckeditor\lang\ms.js" />
+    <Content Include="Scripts\ckeditor\lang\nb.js" />
+    <Content Include="Scripts\ckeditor\lang\nl.js" />
+    <Content Include="Scripts\ckeditor\lang\no.js" />
+    <Content Include="Scripts\ckeditor\lang\pl.js" />
+    <Content Include="Scripts\ckeditor\lang\pt-br.js" />
+    <Content Include="Scripts\ckeditor\lang\pt.js" />
+    <Content Include="Scripts\ckeditor\lang\ro.js" />
+    <Content Include="Scripts\ckeditor\lang\ru.js" />
+    <Content Include="Scripts\ckeditor\lang\si.js" />
+    <Content Include="Scripts\ckeditor\lang\sk.js" />
+    <Content Include="Scripts\ckeditor\lang\sl.js" />
+    <Content Include="Scripts\ckeditor\lang\sq.js" />
+    <Content Include="Scripts\ckeditor\lang\sr-latn.js" />
+    <Content Include="Scripts\ckeditor\lang\sr.js" />
+    <Content Include="Scripts\ckeditor\lang\sv.js" />
+    <Content Include="Scripts\ckeditor\lang\th.js" />
+    <Content Include="Scripts\ckeditor\lang\tr.js" />
+    <Content Include="Scripts\ckeditor\lang\tt.js" />
+    <Content Include="Scripts\ckeditor\lang\ug.js" />
+    <Content Include="Scripts\ckeditor\lang\uk.js" />
+    <Content Include="Scripts\ckeditor\lang\vi.js" />
+    <Content Include="Scripts\ckeditor\lang\zh-cn.js" />
+    <Content Include="Scripts\ckeditor\lang\zh.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\af.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\ar.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\bg.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\ca.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\cs.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\cy.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\da.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\de.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\el.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\en-gb.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\en.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\eo.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\es.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\et.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\fa.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\fi.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\fr-ca.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\fr.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\gl.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\gu.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\he.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\hi.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\hr.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\hu.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\id.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\it.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\ja.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\km.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\ko.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\ku.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\lt.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\lv.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\mk.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\mn.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\nb.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\nl.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\no.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\pl.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\pt-br.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\pt.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\ro.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\ru.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\si.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\sk.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\sl.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\sq.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\sr-latn.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\sr.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\sv.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\th.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\tr.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\tt.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\ug.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\uk.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\vi.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\zh-cn.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\zh.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\_translationstatus.txt" />
+    <Content Include="Scripts\ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="Scripts\ckeditor\plugins\about\dialogs\hidpi\logo_ckeditor.png" />
+    <Content Include="Scripts\ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="Scripts\ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="Scripts\ckeditor\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="Scripts\ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="Scripts\ckeditor\plugins\div\dialogs\div.js" />
+    <Content Include="Scripts\ckeditor\plugins\find\dialogs\find.js" />
+    <Content Include="Scripts\ckeditor\plugins\flash\dialogs\flash.js" />
+    <Content Include="Scripts\ckeditor\plugins\flash\images\placeholder.png" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\button.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\form.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\radio.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\select.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\textarea.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\textfield.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="Scripts\ckeditor\plugins\icons.png" />
+    <Content Include="Scripts\ckeditor\plugins\icons_hidpi.png" />
+    <Content Include="Scripts\ckeditor\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="Scripts\ckeditor\plugins\iframe\images\placeholder.png" />
+    <Content Include="Scripts\ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="Scripts\ckeditor\plugins\image\images\noimage.png" />
+    <Content Include="Scripts\ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="Scripts\ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="Scripts\ckeditor\plugins\link\images\anchor.png" />
+    <Content Include="Scripts\ckeditor\plugins\link\images\hidpi\anchor.png" />
+    <Content Include="Scripts\ckeditor\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="Scripts\ckeditor\plugins\magicline\images\hidpi\icon-rtl.png" />
+    <Content Include="Scripts\ckeditor\plugins\magicline\images\hidpi\icon.png" />
+    <Content Include="Scripts\ckeditor\plugins\magicline\images\icon-rtl.png" />
+    <Content Include="Scripts\ckeditor\plugins\magicline\images\icon.png" />
+    <Content Include="Scripts\ckeditor\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="Scripts\ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="Scripts\ckeditor\plugins\preview\preview.html" />
+    <Content Include="Scripts\ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="Scripts\ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_address.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_div.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_h1.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_h2.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_h3.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_h4.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_h5.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_h6.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_p.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_pre.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\angel_smile.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\angry_smile.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\broken_heart.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\confused_smile.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\cry_smile.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\devil_smile.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\embarrassed_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\embarrassed_smile.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\envelope.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\envelope.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\heart.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\heart.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\kiss.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\kiss.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\lightbulb.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\omg_smile.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\regular_smile.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\sad_smile.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\shades_smile.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\teeth_smile.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\thumbs_down.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\thumbs_up.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\tongue_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\tongue_smile.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\whatchutalkingabout_smile.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\wink_smile.png" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\af.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\ar.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\bg.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\ca.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\cs.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\cy.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\da.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\de.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\el.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\en-gb.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\en.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\eo.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\es.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\et.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\fa.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\fi.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\fr-ca.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\fr.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\gl.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\he.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\hr.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\hu.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\id.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\it.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\ja.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\km.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\ku.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\lt.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\lv.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\nb.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\nl.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\no.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\pl.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\pt-br.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\pt.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\ru.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\si.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\sk.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\sl.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\sq.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\sv.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\th.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\tr.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\tt.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\ug.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\uk.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\vi.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\zh-cn.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\zh.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\_translationstatus.txt" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="Scripts\ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="Scripts\ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="Scripts\ckeditor\plugins\templates\dialogs\templates.css" />
+    <Content Include="Scripts\ckeditor\plugins\templates\dialogs\templates.js" />
+    <Content Include="Scripts\ckeditor\plugins\templates\templates\default.js" />
+    <Content Include="Scripts\ckeditor\plugins\templates\templates\images\template1.gif" />
+    <Content Include="Scripts\ckeditor\plugins\templates\templates\images\template2.gif" />
+    <Content Include="Scripts\ckeditor\plugins\templates\templates\images\template3.gif" />
+    <Content Include="Scripts\ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="Scripts\ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="Scripts\ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="Scripts\ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="Scripts\ckeditor\plugins\wsc\dialogs\wsc_ie.js" />
+    <Content Include="Scripts\ckeditor\samples\ajax.html" />
+    <Content Include="Scripts\ckeditor\samples\api.html" />
+    <Content Include="Scripts\ckeditor\samples\appendto.html" />
+    <Content Include="Scripts\ckeditor\samples\assets\inlineall\logo.png" />
+    <Content Include="Scripts\ckeditor\samples\assets\outputxhtml\outputxhtml.css" />
+    <Content Include="Scripts\ckeditor\samples\assets\sample.jpg" />
+    <Content Include="Scripts\ckeditor\samples\assets\uilanguages\languages.js" />
+    <Content Include="Scripts\ckeditor\samples\datafiltering.html" />
+    <Content Include="Scripts\ckeditor\samples\divreplace.html" />
+    <Content Include="Scripts\ckeditor\samples\index.html" />
+    <Content Include="Scripts\ckeditor\samples\inlineall.html" />
+    <Content Include="Scripts\ckeditor\samples\inlinebycode.html" />
+    <Content Include="Scripts\ckeditor\samples\inlinetextarea.html" />
+    <Content Include="Scripts\ckeditor\samples\jquery.html" />
+    <Content Include="Scripts\ckeditor\samples\plugins\dialog\assets\my_dialog.js" />
+    <Content Include="Scripts\ckeditor\samples\plugins\dialog\dialog.html" />
+    <Content Include="Scripts\ckeditor\samples\plugins\enterkey\enterkey.html" />
+    <Content Include="Scripts\ckeditor\samples\plugins\htmlwriter\assets\outputforflash\outputforflash.swf" />
+    <Content Include="Scripts\ckeditor\samples\plugins\htmlwriter\assets\outputforflash\swfobject.js" />
+    <Content Include="Scripts\ckeditor\samples\plugins\htmlwriter\outputforflash.html" />
+    <Content Include="Scripts\ckeditor\samples\plugins\htmlwriter\outputhtml.html" />
+    <Content Include="Scripts\ckeditor\samples\plugins\magicline\magicline.html" />
+    <Content Include="Scripts\ckeditor\samples\plugins\toolbar\toolbar.html" />
+    <Content Include="Scripts\ckeditor\samples\plugins\wysiwygarea\fullpage.html" />
+    <Content Include="Scripts\ckeditor\samples\readonly.html" />
+    <Content Include="Scripts\ckeditor\samples\replacebyclass.html" />
+    <Content Include="Scripts\ckeditor\samples\replacebycode.html" />
+    <Content Include="Scripts\ckeditor\samples\sample.css" />
+    <Content Include="Scripts\ckeditor\samples\sample.js" />
+    <Content Include="Scripts\ckeditor\samples\tabindex.html" />
+    <Content Include="Scripts\ckeditor\samples\uicolor.html" />
+    <Content Include="Scripts\ckeditor\samples\uilanguages.html" />
+    <Content Include="Scripts\ckeditor\samples\xhtmlstyle.html" />
+    <Content Include="Scripts\ckeditor\skins\moono\dialog.css" />
+    <Content Include="Scripts\ckeditor\skins\moono\dialog_ie.css" />
+    <Content Include="Scripts\ckeditor\skins\moono\dialog_ie7.css" />
+    <Content Include="Scripts\ckeditor\skins\moono\dialog_ie8.css" />
+    <Content Include="Scripts\ckeditor\skins\moono\dialog_iequirks.css" />
+    <Content Include="Scripts\ckeditor\skins\moono\editor.css" />
+    <Content Include="Scripts\ckeditor\skins\moono\editor_gecko.css" />
+    <Content Include="Scripts\ckeditor\skins\moono\editor_ie.css" />
+    <Content Include="Scripts\ckeditor\skins\moono\editor_ie7.css" />
+    <Content Include="Scripts\ckeditor\skins\moono\editor_ie8.css" />
+    <Content Include="Scripts\ckeditor\skins\moono\editor_iequirks.css" />
+    <Content Include="Scripts\ckeditor\skins\moono\icons.png" />
+    <Content Include="Scripts\ckeditor\skins\moono\icons_hidpi.png" />
+    <Content Include="Scripts\ckeditor\skins\moono\images\arrow.png" />
+    <Content Include="Scripts\ckeditor\skins\moono\images\close.png" />
+    <Content Include="Scripts\ckeditor\skins\moono\images\hidpi\close.png" />
+    <Content Include="Scripts\ckeditor\skins\moono\images\hidpi\lock-open.png" />
+    <Content Include="Scripts\ckeditor\skins\moono\images\hidpi\lock.png" />
+    <Content Include="Scripts\ckeditor\skins\moono\images\hidpi\refresh.png" />
+    <Content Include="Scripts\ckeditor\skins\moono\images\lock-open.png" />
+    <Content Include="Scripts\ckeditor\skins\moono\images\lock.png" />
+    <Content Include="Scripts\ckeditor\skins\moono\images\refresh.png" />
+    <Content Include="Scripts\ckeditor\styles.js" />
+    <Content Include="Scripts\Filemanager-master\connectors\asp\filemanager.asp" />
+    <Content Include="Scripts\Filemanager-master\connectors\asp\filemanager.class.asp" />
+    <Content Include="Scripts\Filemanager-master\connectors\asp\filemanager.config.asp" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\aac.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\avi.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\bmp.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\chm.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\css.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\default.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\dll.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\doc.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\docx.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\fla.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\gif.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\htm.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\html.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\ini.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\jar.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\jpeg.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\jpg.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\js.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\lasso.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\locked_default.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\locked__Open.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\mdb.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\mov.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\mp3.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\mp4.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\mpg.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\ogg.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\ogv.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\other_image.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\other_movie.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\other_music.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\other_music2.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\pdf.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\php.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\png.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\ppt.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\py.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\rb.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\real.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\reg.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\rtf.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\sql.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\swf.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\txt.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\vbs.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\wav.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\webm.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\wma.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\wmv.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\xls.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\xlsx.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\xml.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\xsl.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\zip.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\_Close.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\_Documents.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\_Favorites.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\_Image.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\_Movie.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\_Music.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\_Net.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\_Open.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\_ProgramFiles.png" />
+    <Content Include="Scripts\Filemanager-master\images\fileicons\_Works.png" />
+    <Content Include="Scripts\Filemanager-master\images\fmlogo_bbg.png" />
+    <Content Include="Scripts\Filemanager-master\images\fmlogo_wbg.png" />
+    <Content Include="Scripts\Filemanager-master\images\wait30trans.gif" />
+    <Content Include="Scripts\Filemanager-master\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\comment\comment.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\comment\continuecomment.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\dialog\dialog.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\dialog\dialog.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\display\fullscreen.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\display\fullscreen.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\display\placeholder.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\display\rulers.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\edit\closebrackets.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\edit\closetag.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\edit\continuelist.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\edit\matchbrackets.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\edit\matchtags.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\edit\trailingspace.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\fold\brace-fold.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\fold\comment-fold.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\fold\foldcode.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\fold\foldgutter.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\fold\foldgutter.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\fold\indent-fold.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\fold\markdown-fold.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\fold\xml-fold.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\hint\anyword-hint.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\hint\css-hint.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\hint\html-hint.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\hint\javascript-hint.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\hint\python-hint.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\hint\show-hint.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\hint\show-hint.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\hint\sql-hint.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\hint\xml-hint.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\lint\coffeescript-lint.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\lint\css-lint.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\lint\javascript-lint.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\lint\json-lint.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\lint\lint.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\lint\lint.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\lint\yaml-lint.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\merge\dep\diff_match_patch.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\merge\merge.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\merge\merge.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\mode\loadmode.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\mode\multiplex.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\mode\multiplex_test.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\mode\overlay.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\runmode\colorize.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\runmode\runmode-standalone.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\runmode\runmode.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\runmode\runmode.node.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\scroll\scrollpastend.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\search\match-highlighter.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\search\search.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\search\searchcursor.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\selection\active-line.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\selection\mark-selection.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\tern\tern.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\tern\tern.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\tern\worker.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\addon\wrap\hardwrap.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\activeline.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\anywordhint.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\bidi.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\btree.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\buffers.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\changemode.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\closebrackets.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\closetag.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\complete.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\emacs.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\folding.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\fullscreen.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\hardwrap.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\html5complete.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\indentwrap.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\lint.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\loadmode.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\marker.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\markselection.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\matchhighlighter.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\matchtags.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\merge.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\multiplex.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\mustache.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\placeholder.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\preview.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\resize.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\rulers.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\runmode.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\search.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\spanaffectswrapping_shim.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\sublime.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\tern.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\theme.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\trailingspace.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\variableheight.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\vim.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\visibletabs.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\widget.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\demo\xmlcomplete.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\doc\activebookmark.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\doc\compress.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\doc\docs.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\doc\internals.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\doc\logo.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\doc\logo.svg" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\doc\manual.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\doc\realworld.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\doc\releases.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\doc\reporting.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\doc\upgrade_v2.2.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\doc\upgrade_v3.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\doc\upgrade_v4.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\dynamic-mode.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\keymap\emacs.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\keymap\sublime.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\keymap\vim.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\lib\codemirror.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\lib\codemirror.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\apl\apl.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\apl\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\asterisk\asterisk.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\asterisk\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\clike\clike.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\clike\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\clike\scala.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\clojure\clojure.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\clojure\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\cobol\cobol.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\cobol\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\coffeescript\coffeescript.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\coffeescript\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\commonlisp\commonlisp.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\commonlisp\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\css\css.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\css\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\css\less.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\css\less_test.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\css\scss.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\css\scss_test.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\css\test.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\diff\diff.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\diff\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\django\django.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\django\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\dtd\dtd.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\dtd\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\dylan\dylan.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\dylan\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\d\d.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\d\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\ecl\ecl.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\ecl\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\eiffel\eiffel.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\eiffel\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\erlang\erlang.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\erlang\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\fortran\fortran.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\fortran\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\gas\gas.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\gas\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\gfm\gfm.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\gfm\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\gfm\test.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\gherkin\gherkin.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\gherkin\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\go\go.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\go\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\groovy\groovy.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\groovy\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\haml\haml.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\haml\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\haml\test.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\haskell\haskell.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\haskell\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\haxe\haxe.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\haxe\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\htmlembedded\htmlembedded.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\htmlembedded\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\htmlmixed\htmlmixed.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\htmlmixed\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\http\http.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\http\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\jade\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\jade\jade.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\javascript\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\javascript\javascript.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\javascript\json-ld.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\javascript\test.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\javascript\typescript.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\jinja2\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\jinja2\jinja2.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\julia\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\julia\julia.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\livescript\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\livescript\livescript.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\lua\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\lua\lua.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\markdown\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\markdown\markdown.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\markdown\test.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\meta.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\mirc\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\mirc\mirc.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\mllike\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\mllike\mllike.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\nginx\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\nginx\nginx.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\ntriples\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\ntriples\ntriples.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\octave\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\octave\octave.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\pascal\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\pascal\pascal.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\pegjs\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\pegjs\pegjs.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\perl\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\perl\perl.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\php\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\php\php.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\pig\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\pig\pig.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\properties\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\properties\properties.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\puppet\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\puppet\puppet.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\python\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\python\python.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\q\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\q\q.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\rpm\changes\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\rpm\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\rpm\rpm.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\rst\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\rst\rst.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\ruby\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\ruby\ruby.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\ruby\test.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\rust\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\rust\rust.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\r\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\r\r.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\sass\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\sass\sass.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\scheme\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\scheme\scheme.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\shell\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\shell\shell.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\sieve\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\sieve\sieve.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\smalltalk\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\smalltalk\smalltalk.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\smartymixed\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\smartymixed\smartymixed.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\smarty\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\smarty\smarty.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\solr\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\solr\solr.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\sparql\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\sparql\sparql.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\sql\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\sql\sql.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\stex\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\stex\stex.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\stex\test.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\tcl\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\tcl\tcl.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\tiddlywiki\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\tiddlywiki\tiddlywiki.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\tiddlywiki\tiddlywiki.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\tiki\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\tiki\tiki.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\tiki\tiki.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\toml\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\toml\toml.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\turtle\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\turtle\turtle.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\vbscript\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\vbscript\vbscript.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\vb\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\vb\vb.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\velocity\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\velocity\velocity.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\verilog\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\verilog\verilog.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\xml\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\xml\test.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\xml\xml.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\xquery\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\xquery\test.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\xquery\xquery.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\yaml\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\yaml\yaml.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\z80\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\mode\z80\z80.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\test\comment_test.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\test\doc_test.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\test\driver.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\test\emacs_test.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\test\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\test\lint\acorn.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\test\lint\lint.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\test\lint\walk.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\test\mode_test.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\test\mode_test.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\test\multi_test.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\test\phantom_driver.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\test\run.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\test\search_test.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\test\sublime_test.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\test\test.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\test\vim_test.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\theme\3024-day.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\theme\3024-night.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\theme\ambiance-mobile.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\theme\ambiance.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\theme\base16-dark.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\theme\base16-light.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\theme\blackboard.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\theme\cobalt.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\theme\eclipse.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\theme\elegant.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\theme\erlang-dark.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\theme\lesser-dark.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\theme\mbo.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\theme\mdn-like.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\theme\midnight.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\theme\monokai.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\theme\neat.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\theme\night.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\theme\paraiso-dark.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\theme\paraiso-light.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\theme\pastel-on-dark.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\theme\rubyblue.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\theme\solarized.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\theme\the-matrix.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\theme\tomorrow-night-eighties.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\theme\twilight.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\theme\vibrant-ink.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\theme\xq-dark.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\CodeMirror\theme\xq-light.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\custom-scrollbar-plugin\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\custom-scrollbar-plugin\jquery.mCustomScrollbar.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\custom-scrollbar-plugin\jquery.mCustomScrollbar.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\custom-scrollbar-plugin\jquery.mCustomScrollbar.min.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\custom-scrollbar-plugin\js\minified\jquery-1.11.0.min.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\custom-scrollbar-plugin\js\minified\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\custom-scrollbar-plugin\js\minified\jquery-2.1.0.min.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\custom-scrollbar-plugin\js\minified\jquery-ui-1.10.4.min.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\custom-scrollbar-plugin\js\minified\jquery.mCustomScrollbar.min.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\custom-scrollbar-plugin\js\minified\jquery.mousewheel-3.0.6.min.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\custom-scrollbar-plugin\js\minified\jquery.mousewheel.min.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\custom-scrollbar-plugin\js\uncompressed\jquery.mCustomScrollbar.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\custom-scrollbar-plugin\js\uncompressed\jquery.mousewheel-3.0.6.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\custom-scrollbar-plugin\js\uncompressed\jquery.mousewheel.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\custom-scrollbar-plugin\LICENSE.txt" />
+    <Content Include="Scripts\Filemanager-master\scripts\custom-scrollbar-plugin\mCSB_buttons.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\dropzone\download.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\dropzone\downloads\css\basic.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\dropzone\downloads\css\dropzone.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\dropzone\downloads\dropzone-amd-module.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\dropzone\downloads\dropzone-amd-module.min.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\dropzone\downloads\dropzone.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\dropzone\downloads\dropzone.min.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\dropzone\downloads\images\spritemap%402x.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\dropzone\downloads\images\spritemap.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\dropzone\index.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\dropzone\lib\dropzone.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\dropzone\test\test.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\dropzone\test\test.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\filemanager.config.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\filemanager.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\filemanager.liveSearch.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\filemanager.liveSearch.min.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\filemanager.min.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery-1.8.3.min.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.contextmenu\images\cut.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.contextmenu\images\door.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.contextmenu\images\page_white_copy.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.contextmenu\images\page_white_delete.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.contextmenu\images\page_white_edit.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.contextmenu\images\page_white_paste.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.contextmenu\jquery.contextMenu-1.01.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.contextmenu\jquery.contextMenu-1.01.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.filetree\images\application.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.filetree\images\code.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.filetree\images\css.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.filetree\images\db.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.filetree\images\directory-lock.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.filetree\images\directory.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.filetree\images\doc.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.filetree\images\file-lock.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.filetree\images\file.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.filetree\images\film.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.filetree\images\flash.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.filetree\images\folder_open.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.filetree\images\html.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.filetree\images\java.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.filetree\images\linux.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.filetree\images\music.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.filetree\images\pdf.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.filetree\images\php.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.filetree\images\picture.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.filetree\images\ppt.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.filetree\images\psd.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.filetree\images\ruby.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.filetree\images\script.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.filetree\images\spinner.gif" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.filetree\images\square-loading.gif" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.filetree\images\square-spinner.gif" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.filetree\images\txt.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.filetree\images\xls.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.filetree\images\zip.png" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.filetree\jqueryFileTree.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.filetree\jqueryFileTree.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.form-3.24.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.impromptu-3.2.min.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.splitter\hgrabber.gif" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.splitter\jquery.splitter-1.5.1.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.splitter\jquery.splitter.css" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.splitter\vgrabber.gif" />
+    <Content Include="Scripts\Filemanager-master\scripts\jquery.tablesorter-2.7.2.min.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\languages\bs.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\languages\ca.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\languages\cs.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\languages\da.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\languages\de.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\languages\en-gb.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\languages\en.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\languages\es.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\languages\fi.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\languages\fr.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\languages\he.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\languages\hu.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\languages\it.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\languages\ja.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\languages\nl.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\languages\pl.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\languages\pt.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\languages\ru.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\languages\sv.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\languages\tr.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\languages\vn.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\languages\zh-cn.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\languages\zh-tw.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\copy.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\dist\ZeroClipboard.Core.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\dist\ZeroClipboard.Core.min.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\dist\ZeroClipboard.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\dist\ZeroClipboard.min.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\dist\ZeroClipboard.swf" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\Gruntfile.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\index.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\src\js\client\api.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\src\js\client\private.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\src\js\client\state.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\src\js\core\api.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\src\js\core\private.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\src\js\core\state.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\src\js\end.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\src\js\shared\private.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\src\js\shared\state.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\src\js\start.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\test\built\ZeroClipboard.Core.tests.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\test\built\ZeroClipboard.Core.tests.js.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\test\built\ZeroClipboard.tests.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\test\built\ZeroClipboard.tests.js.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\test\client\api.tests.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\test\client\api.tests.js.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\test\client\private.tests.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\test\client\private.tests.js.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\test\core\api.tests.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\test\core\api.tests.js.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\test\core\private.tests.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\test\core\private.tests.js.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\test\index.html" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\test\shared\private.tests.js" />
+    <Content Include="Scripts\Filemanager-master\scripts\zeroclipboard\test\shared\private.tests.js.html" />
+    <Content Include="Scripts\Filemanager-master\styles\reset.css" />
+    <Content Include="Scripts\Filemanager-master\themes\default\images\accept.png" />
+    <Content Include="Scripts\Filemanager-master\themes\default\images\ajax-loader.gif" />
+    <Content Include="Scripts\Filemanager-master\themes\default\images\application_view_icons.png" />
+    <Content Include="Scripts\Filemanager-master\themes\default\images\application_view_list.png" />
+    <Content Include="Scripts\Filemanager-master\themes\default\images\bin_closed.png" />
+    <Content Include="Scripts\Filemanager-master\themes\default\images\bullet_arrow_down.png" />
+    <Content Include="Scripts\Filemanager-master\themes\default\images\bullet_arrow_up.png" />
+    <Content Include="Scripts\Filemanager-master\themes\default\images\copy.png" />
+    <Content Include="Scripts\Filemanager-master\themes\default\images\download.png" />
+    <Content Include="Scripts\Filemanager-master\themes\default\images\edit.png" />
+    <Content Include="Scripts\Filemanager-master\themes\default\images\folder_add.png" />
+    <Content Include="Scripts\Filemanager-master\themes\default\images\house.png" />
+    <Content Include="Scripts\Filemanager-master\themes\default\images\info.png" />
+    <Content Include="Scripts\Filemanager-master\themes\default\images\move.png" />
+    <Content Include="Scripts\Filemanager-master\themes\default\images\parentfolder.png" />
+    <Content Include="Scripts\Filemanager-master\themes\default\images\plus.png" />
+    <Content Include="Scripts\Filemanager-master\themes\default\images\replace.png" />
+    <Content Include="Scripts\Filemanager-master\themes\default\images\reset.png" />
+    <Content Include="Scripts\Filemanager-master\themes\default\images\tag.png" />
+    <Content Include="Scripts\Filemanager-master\themes\default\images\upload.png" />
+    <Content Include="Scripts\Filemanager-master\themes\default\images\wait30trans.gif" />
+    <Content Include="Scripts\Filemanager-master\themes\default\styles\filemanager.css" />
+    <Content Include="Scripts\Filemanager-master\themes\default\styles\ie.css" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-dark\images\accept.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-dark\images\ajax-loader.gif" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-dark\images\application_view_icons.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-dark\images\application_view_list.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-dark\images\bin_closed.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-dark\images\bullet_arrow_down.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-dark\images\bullet_arrow_up.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-dark\images\copy.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-dark\images\download.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-dark\images\edit.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-dark\images\folder_add.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-dark\images\house.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-dark\images\info.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-dark\images\move.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-dark\images\parentfolder.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-dark\images\plus.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-dark\images\replace.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-dark\images\reset.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-dark\images\tag.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-dark\images\upload.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-dark\images\wait30trans.gif" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-dark\styles\filemanager.css" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-dark\styles\ie.css" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-oil\images\accept.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-oil\images\ajax-loader.gif" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-oil\images\application_view_icons.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-oil\images\application_view_list.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-oil\images\bin_closed.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-oil\images\bullet_arrow_down.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-oil\images\bullet_arrow_up.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-oil\images\copy.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-oil\images\download.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-oil\images\edit.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-oil\images\folder_add.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-oil\images\house.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-oil\images\info.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-oil\images\move.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-oil\images\parentfolder.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-oil\images\plus.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-oil\images\replace.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-oil\images\reset.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-oil\images\tag.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-oil\images\upload.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-oil\images\wait30trans.gif" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-oil\styles\filemanager.css" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-oil\styles\ie.css" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-turquoise\images\accept.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-turquoise\images\ajax-loader.gif" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-turquoise\images\application_view_icons.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-turquoise\images\application_view_list.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-turquoise\images\bin_closed.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-turquoise\images\bullet_arrow_down.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-turquoise\images\bullet_arrow_up.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-turquoise\images\copy.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-turquoise\images\download.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-turquoise\images\edit.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-turquoise\images\folder_add.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-turquoise\images\house.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-turquoise\images\info.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-turquoise\images\move.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-turquoise\images\parentfolder.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-turquoise\images\plus.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-turquoise\images\replace.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-turquoise\images\reset.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-turquoise\images\tag.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-turquoise\images\upload.png" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-turquoise\images\wait30trans.gif" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-turquoise\styles\filemanager.css" />
+    <Content Include="Scripts\Filemanager-master\themes\flat-turquoise\styles\ie.css" />
+    <Content Include="Scripts\jquery-1.11.3.min.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery-2.0.0.js" />
+    <Content Include="Scripts\jquery-2.1.3.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <None Include="Scripts\jquery-2.1.3.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.3.js" />
+    <Content Include="Scripts\jquery-2.1.3.min.js" />
+    <Content Include="Scripts\jquery-migrate-1.2.1.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.1.0.debug.js" />
+    <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\search.mvc.helpers.js" />
+    <Content Include="Storage\Img\1.jpg.png" />
+    <Content Include="Storage\Img\2.jpg" />
+    <Content Include="Storage\Img\93363ebe11066f9afdd0d1544c9dd747.jpg" />
+    <Content Include="Storage\Img\cb8384bf1ec67910888a0f499143703d.jpg" />
+    <Content Include="Storage\Img\ef5ae51b3d0499739606735e162ef3c6.jpg" />
+    <Content Include="Storage\Img\kappfinder_6184.ico" />
+    <Content Include="Storage\Img\kappfinder_8235.png" />
+    <Content Include="Storage\Img\Oleg.jpg" />
+    <Content Include="Storage\Img\picture123.jpg" />
+    <Content Include="Storage\Img\rss.jpg" />
+    <Content Include="Storage\Img\Themes\12 Fabric.jpg" />
+    <Content Include="Storage\Img\Моя_папка\abs3.jpg" />
+    <Content Include="Storage\Img\Моя_папка\logo.jpg" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveExternalLoginsPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Shared\_commentsview.cshtml" />
+    <Content Include="Views\About\About.cshtml" />
+    <Content Include="Views\Category\CreateCategory.cshtml" />
+    <Content Include="Views\Category\FilterRecordsFromCategory.cshtml" />
+    <Content Include="Views\Category\GetCategories.cshtml" />
+    <Content Include="Views\Record\AddRecord.cshtml" />
+    <Content Include="Views\Record\EditRecord.cshtml" />
+    <Content Include="Views\Record\GetRecord.cshtml" />
+    <Content Include="Views\Record\GetRecords.cshtml" />
+    <Content Include="Views\Resume\AddResume.cshtml" />
+    <Content Include="Views\Resume\EditResume.cshtml" />
+    <Content Include="Views\Resume\Index.cshtml" />
+    <Content Include="Storage\Резюме Сыса О.А%28jun .Net%29.doc" />
+    <Content Include="Storage\Резюме_Сыса_О.А_%28jun .Net%29.pdf" />
+    <Content Include="Views\Shared\AboutViewStart.cshtml" />
+    <Content Include="Views\Shared\ManageCommentsView.cshtml" />
+    <Content Include="Views\Mail\Result.cshtml" />
+    <Content Include="Views\Shared\_adminlayout.cshtml" />
+    <Content Include="Views\Mail\getMailsresult.cshtml" />
+    <Content Include="Views\Mail\GetMail.cshtml" />
+    <Content Include="Views\Users\GetUsers.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\Fonts\AGAvant\" />
+    <Folder Include="Content\Fonts\vant2\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\MyDBObjectsLINQ.dbml.layout">
+      <DependentUpon>MyDBObjectsLINQ.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51682/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
